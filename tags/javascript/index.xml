@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/javascript/</link>
+    <description>Recent content in Javascript on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Nov 2014 15:14:00 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Use different versions of Node.js using NVM</title>
+      <link>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</link>
+      <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</guid>
+      <description>
+
+&lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;
+
+&lt;h4 id=&#34;method-1:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Method 1.&lt;/h4&gt;
+
+&lt;p&gt;For the first method use below command on your terminal to install latest version of Node.js on your ubuntu system&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add cris-lea node ppa repository
+&lt;code&gt;sudo add-apt-repository ppa:chris-lea/node.js&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Update your pacakge manager
+&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install nodejs
+&lt;code&gt;sudo apt-get install nodejs&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check the version of nodejs using &lt;code&gt;node -v&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;method-2:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Method 2.&lt;/h4&gt;
+
+&lt;p&gt;This is a smarter method and gives you more control over &lt;strong&gt;Node.js&lt;/strong&gt; versions.
+&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;NVM&lt;/a&gt; is Node Version Manager which installs and manages different versions of Node.js on your system.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For installing nvm, you need few dependency packages first. You many already have them, if not then you can install them using below command.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install build-essential libssl-dev curl&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download the nvm installation script from nvm &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;GitHub page&lt;/a&gt;. The version number may be different, but normally, you can download and install it using following command:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Above command might fail if you&amp;rsquo;re not a root user. For linux mint the script tries to install in directory &lt;code&gt;/etc/mdm/&lt;/code&gt;. So, You need to change the owner of &lt;code&gt;/etc/mdm/&lt;/code&gt; directory if you are using Linux Mint. Use below command for this situations. Assuming you are logged in as  &lt;code&gt;xyzuser&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;sudo chown -R xyzuser /etc/mdm&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To gain access to the nvm features, you&amp;rsquo;ll need to log out and log in back, or you can source the ~/.profile file so that your current session knows about the changes:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;source ~/.profile&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;few-useful-nvm-commands:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Few useful NVM commands&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find out available Node.js versions.&lt;br/&gt;
+&lt;code&gt;nvm ls-remote&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install a particular version of Node.js&lt;br/&gt;
+&lt;code&gt;nvm install 0.11.33&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use a particular version of Node.js&lt;br/&gt;
+&lt;code&gt;nvm use 0.11.13&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List version of Node.js available on your machine&lt;br/&gt;
+&lt;code&gt;nvm ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set a particular version as default.&lt;br/&gt;
+&lt;code&gt;nvm alias default 0.11.13&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is one caveat. NVM installs Node.js in your home directory and other users can&amp;rsquo;t access it, so you should always have one of stable version of node.js installed using &lt;strong&gt;Method 1&lt;/strong&gt; mentioned above.&lt;/p&gt;
+
+&lt;p&gt;Why so much emphasis on using nvm, because you might be working on different Node.js projects which may work on a particular version and break on others. So using NVM saves a lot of effort.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For more info visit the &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;NVM Github Repository&lt;/a&gt;. For any issue please comment below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Javascript MapReduce examples</title>
+      <link>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</link>
+      <pubDate>Fri, 13 Jun 2014 02:03:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</guid>
+      <description>
+
+&lt;p&gt;Recently, I was using map and reduce functions in javascript for my project. These are very userful. You can use them for different kind of array manipulations. Here I am listing out various use cases with code snippets.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-finding-unique-elements-in-an-array:9284febc3c6bb8c25359a6f729f7e283&#34;&gt;1.  Finding unique elements in an Array&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;
+var cities = [&#34;bombay&#34;, &#34;delhi&#34;, &#34;bombay&#34;, &#34;delhi&#34;, &#34;delhi&#34;, &#34;chennai&#34;];
+
+var uniqueCities = cities.reduce(function(p, c){
+         if(p.indexOf(c)&lt;0) p.push(c);
+            return p;
+         },[]);
+console.log(uniqueCities); // [&#34;bombay&#34;, &#34;delhi&#34;, &#34;chennai&#34;]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-sum-up-array-of-numbers:9284febc3c6bb8c25359a6f729f7e283&#34;&gt;2. Sum up array of numbers&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;var foo = [1,2,3,4,5];
+var bar = foo.reduce(function(sum, a) { return sum + a; }, 0)
+var barOne = foo.reduce( function(sum, a) { return sum + a; }, 1)
+console.log(bar, barOne) // 16
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;here, the second argument of reduce is initial value of sum. If you don&amp;rsquo;t give the second argument at all, code will work generally but not in case of complex objects.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to use jQuery UI datepicker</title>
+      <link>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</guid>
+      <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First you need to include jQuery UI javascript and css in head of your html page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;  
+ &amp;lt;script type=&amp;quot;text/javascript&amp;quot;  
+      src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+ &amp;lt;link  
+      href=&amp;quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css&amp;quot;  
+      rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;  
+ &amp;lt;script  
+      src=&amp;quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+ &amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Then add following html code in body section of your page where you want datepicker.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;input id=&amp;quot;datepicker&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;  
+      $(document).ready(function() {  
+           $(&amp;quot;#datepicker&amp;quot;).datepicker({  
+                changeMonth : true,  
+                changeYear : true,  
+                dateFormat : &amp;quot;yy-mm-dd&amp;quot;,  
+                altField : &amp;quot;#alternate&amp;quot;,  
+                altFormat : &amp;quot;DD, d MM, yy&amp;quot;,  
+                showButtonPanel : true,  
+                showOtherMonths : true,  
+                selectOtherMonths : true,  
+                showOn : &amp;quot;button&amp;quot;,  
+                buttonImage : &amp;quot;calendar.gif&amp;quot;,  
+                buttonImageOnly : true,  
+                showAnim : &amp;quot;slide&amp;quot;  
+           });  
+      });  
+ &amp;lt;/script&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Above javaScript code runs as soon as the full html page is ready. The various options are for different variation available with the datepicker ui. You can remove and add any option as per the requirements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Suppose you don&amp;rsquo;t want the animation while calendar loads, then remove the last option &amp;lsquo;showAnim : &amp;ldquo;slide&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;You can find different variations at &lt;a href=&#34;http://jqueryui.com/datepicker/&#34;&gt;jQuery UI datepicker&lt;/a&gt;.
+I&amp;rsquo;ll soon upload zip of html file with working the Datepicker.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: This post was originally posted by me only on my other blog dated October 24, 2012&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

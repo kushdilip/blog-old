@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/categories/programming/</link>
+    <description>Recent content in Programming on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Jun 2014 02:03:00 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Javascript MapReduce examples</title>
+      <link>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</link>
+      <pubDate>Fri, 13 Jun 2014 02:03:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</guid>
+      <description>
+
+&lt;p&gt;Recently, I was using map and reduce functions in javascript for my project. These are very userful. You can use them for different kind of array manipulations. Here I am listing out various use cases with code snippets.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-finding-unique-elements-in-an-array:9284febc3c6bb8c25359a6f729f7e283&#34;&gt;1.  Finding unique elements in an Array&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;
+var cities = [&#34;bombay&#34;, &#34;delhi&#34;, &#34;bombay&#34;, &#34;delhi&#34;, &#34;delhi&#34;, &#34;chennai&#34;];
+
+var uniqueCities = cities.reduce(function(p, c){
+         if(p.indexOf(c)&lt;0) p.push(c);
+            return p;
+         },[]);
+console.log(uniqueCities); // [&#34;bombay&#34;, &#34;delhi&#34;, &#34;chennai&#34;]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-sum-up-array-of-numbers:9284febc3c6bb8c25359a6f729f7e283&#34;&gt;2. Sum up array of numbers&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;var foo = [1,2,3,4,5];
+var bar = foo.reduce(function(sum, a) { return sum + a; }, 0)
+var barOne = foo.reduce( function(sum, a) { return sum + a; }, 1)
+console.log(bar, barOne) // 16
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;here, the second argument of reduce is initial value of sum. If you don&amp;rsquo;t give the second argument at all, code will work generally but not in case of complex objects.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to use jQuery UI datepicker</title>
+      <link>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</guid>
+      <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First you need to include jQuery UI javascript and css in head of your html page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;  
+ &amp;lt;script type=&amp;quot;text/javascript&amp;quot;  
+      src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+ &amp;lt;link  
+      href=&amp;quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css&amp;quot;  
+      rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;  
+ &amp;lt;script  
+      src=&amp;quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+ &amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Then add following html code in body section of your page where you want datepicker.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;input id=&amp;quot;datepicker&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;  
+      $(document).ready(function() {  
+           $(&amp;quot;#datepicker&amp;quot;).datepicker({  
+                changeMonth : true,  
+                changeYear : true,  
+                dateFormat : &amp;quot;yy-mm-dd&amp;quot;,  
+                altField : &amp;quot;#alternate&amp;quot;,  
+                altFormat : &amp;quot;DD, d MM, yy&amp;quot;,  
+                showButtonPanel : true,  
+                showOtherMonths : true,  
+                selectOtherMonths : true,  
+                showOn : &amp;quot;button&amp;quot;,  
+                buttonImage : &amp;quot;calendar.gif&amp;quot;,  
+                buttonImageOnly : true,  
+                showAnim : &amp;quot;slide&amp;quot;  
+           });  
+      });  
+ &amp;lt;/script&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Above javaScript code runs as soon as the full html page is ready. The various options are for different variation available with the datepicker ui. You can remove and add any option as per the requirements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Suppose you don&amp;rsquo;t want the animation while calendar loads, then remove the last option &amp;lsquo;showAnim : &amp;ldquo;slide&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;You can find different variations at &lt;a href=&#34;http://jqueryui.com/datepicker/&#34;&gt;jQuery UI datepicker&lt;/a&gt;.
+I&amp;rsquo;ll soon upload zip of html file with working the Datepicker.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: This post was originally posted by me only on my other blog dated October 24, 2012&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gyaan on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/gyaan/</link>
+    <description>Recent content in Gyaan on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Dec 2015 00:24:32 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/gyaan/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Technical debt resources</title>
+      <link>http://kushdilip.github.io/blog/technical-debt-resources/</link>
+      <pubDate>Thu, 17 Dec 2015 00:24:32 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/technical-debt-resources/</guid>
+      <description>
+
+&lt;p&gt;You might have heard of the term Technical Debt at some point of time in your programming career. It is defined as making short term compromise in designing software systems and writing code to gain which makes it difficult to maintain the code &amp;amp; software in the future.&lt;/p&gt;
+
+&lt;p&gt;Recently I was reading a lot of material on software design, architecture. And this term suddenly caught my eye. So I kept on going further to understand how do we create technical debt and what are the stepwise solutions to fix or altogether avoid it.&lt;/p&gt;
+
+&lt;p&gt;Here I am sharing all the links and articles I went through or I will go through on this topic. I have categories the articles into separate sections so as keep the flow.&lt;/p&gt;
+
+&lt;h4 id=&#34;understanding:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Understanding&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/08/07/technical-debt-1/&#34;&gt;https://18f.gsa.gov/2015/08/07/technical-debt-1/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/09/04/what-is-technical-debt/&#34;&gt;https://18f.gsa.gov/2015/09/04/what-is-technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://notmessenger.com/technical-debt/&#34;&gt;http://notmessenger.com/technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;identifying:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Identifying&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/10/05/managing-technical-debt/&#34;&gt;https://18f.gsa.gov/2015/10/05/managing-technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;solution:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/10/22/preventing-technical-debt/&#34;&gt;https://18f.gsa.gov/2015/10/22/preventing-technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/11/17/choose-design-over-architecture/&#34;&gt;https://18f.gsa.gov/2015/11/17/choose-design-over-architecture/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;consequences:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Consequences&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.industriallogic.com/blog/technical-debt-considered/&#34;&gt;https://www.industriallogic.com/blog/technical-debt-considered/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://brucefwebster.com/2008/04/11/the-wetware-crisis-the-dead-sea-effect/&#34;&gt;http://brucefwebster.com/2008/04/11/the-wetware-crisis-the-dead-sea-effect/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It looks quite scary after reading all the above articles but if there is a problem then there is always a solution. So avoiding short term compromizes and following better design patterns can free the people working on any product from huge technical debts.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/data/</link>
+    <description>Recent content in Data on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Nov 2014 00:48:54 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rollback Ember-Data Model changes completely</title>
+      <link>http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/</link>
+      <pubDate>Wed, 05 Nov 2014 00:48:54 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/</guid>
+      <description>&lt;p&gt;Ember-Data models have a property called &lt;code&gt;isDirty&lt;/code&gt;. Whenever you make some changes to local model and it&amp;rsquo;s not yet saved to server, &lt;code&gt;isDirty&lt;/code&gt; property will be true.
+Generally our models have various &lt;code&gt;belongsTo&lt;/code&gt; and &lt;code&gt;hasMany&lt;/code&gt; relationships. So if some child of model gets dirty, then doing &lt;code&gt;model.rollback()&lt;/code&gt; doesn&amp;rsquo;t rollbacks changes on child ember objects.&lt;/p&gt;
+
+&lt;p&gt;Here I&amp;rsquo;m going to explain how to handle similar situation.&lt;/p&gt;
+
+&lt;p&gt;Suppose you have Ember-Data Models called &lt;code&gt;House&lt;/code&gt; and &lt;code&gt;Address&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;app/models/house.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var House = DS.Model.extend({
+	id: DS.attr(&amp;quot;string&amp;quot;),
+	member_count: DS.attr(&amp;quot;number&amp;quot;),
+	address: DS.belongsTo(&amp;quot;Address&amp;quot;)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;app/models/address.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var Address = DS.Model.extend({
+	house_no: DS.attr(&amp;quot;number&amp;quot;)
+	Street: DS.attr(&amp;quot;string&amp;quot;)
+	city: DS.attr(&amp;quot;string&amp;quot;)
+	state: DS.attr(&amp;quot;string&amp;quot;)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&amp;rsquo;s assume I fetched &lt;code&gt;house&lt;/code&gt; object from server. In my client application if change &lt;code&gt;member_count&lt;/code&gt; to some value say 5.
+&lt;code&gt;house.set(&amp;quot;member_count&amp;quot;, 5)&lt;/code&gt;
+Now &lt;code&gt;house.get(&amp;quot;isDirty&amp;quot;)&lt;/code&gt; will be true and upon executing &lt;code&gt;house.rollback()&lt;/code&gt; will reset the value to original. but if I change something in address object, say &lt;code&gt;house.get(&#39;address&#39;).set(&#39;house_no&#39;, 10)&lt;/code&gt;. Now &lt;code&gt;house&lt;/code&gt; is still clean although it&amp;rsquo;s child &lt;code&gt;address&lt;/code&gt; is now dirty.&lt;/p&gt;
+
+&lt;p&gt;You can use below code to rollback the entire house as well as it&amp;rsquo;s childs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var deepRollback = function(model) {
+    var that;
+    that = this;
+    if (model.get(&amp;quot;isDirty&amp;quot;)) {
+      model.rollback();
+    }
+    return model.eachRelationship(function(key, relationship) {
+      if (relationship.kind === &amp;quot;belongsTo&amp;quot;) {
+        return that.deepRollback(model.get(key));
+      }
+    });
+  }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now executing &lt;code&gt;deepRollback(house)&lt;/code&gt; will rollback house and all it&amp;rsquo;s &lt;code&gt;belongsTo&lt;/code&gt; objects.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

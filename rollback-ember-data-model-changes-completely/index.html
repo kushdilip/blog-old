@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta name="google-site-verification" content="s2W34Ywb5csArY2JvOtaf604V2lyxnL58qaTXvIPmPo" />
+    <title>Rollback Ember-Data Model changes completely &middot; Dilip Kushwaha</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Dilip">
+    
+      <meta name="description" content="Javascript &amp; Web blog by dilip kushwaha">
+    
+    
+    <link rel="icon" href="http://kushdilip.github.io/blog/favicon.ico">
+    <link rel="apple-touch-icon" href="http://kushdilip.github.io/blog/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://kushdilip.github.io/blog/css/style.css">
+    <link rel="stylesheet" href="http://kushdilip.github.io/blog/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://kushdilip.github.io/blog/css/monokai.css">
+    <link rel="stylesheet" href="http://kushdilip.github.io/blog/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Rollback Ember-Data Model changes completely" />
+<meta property="og:description" content="Ember-Data models have a property called isDirty. Whenever you make some changes to local model and it&rsquo;s not yet saved to server, isDirty property will be true.
+Generally our models have various belongsTo and hasMany relationships. So if some child of model gets dirty, then doing model.rollback() doesn&rsquo;t rollbacks changes on child ember objects.
+
+Here I&rsquo;m going to explain how to handle similar situation.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/" />
+
+
+<meta property="og:updated_time" content="2014-11-05T00:48:54&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Rollback Ember-Data Model changes completely">
+<meta itemprop="description" content="Ember-Data models have a property called isDirty. Whenever you make some changes to local model and it&rsquo;s not yet saved to server, isDirty property will be true.
+Generally our models have various belongsTo and hasMany relationships. So if some child of model gets dirty, then doing model.rollback() doesn&rsquo;t rollbacks changes on child ember objects.
+
+Here I&rsquo;m going to explain how to handle similar situation.
+">
+
+
+<meta itemprop="dateModified" content="2014-11-05T00:48:54&#43;05:30" />
+<meta itemprop="wordCount" content="214">
+
+
+
+<meta itemprop="keywords" content="ember,ghost-blog,how-to,programming,setup,tools,.net,c,c#,code,data,documentation,ember,ember-cli,ember-data,games,ghost-blog,gyaan,how-to,hybrid,ide,ionic,javascript,jquery,links,linux,linux-mint,mobile,nodejs,nvm,resources,software,sublime-text,themes,tools,tutorial,ubuntu,virtualbox,vstudio,wcf,windows," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Rollback Ember-Data Model changes completely"/>
+<meta name="twitter:description" content="Ember-Data models have a property called isDirty. Whenever you make some changes to local model and it&rsquo;s not yet saved to server, isDirty property will be true.
+Generally our models have various belongsTo and hasMany relationships. So if some child of model gets dirty, then doing model.rollback() doesn&rsquo;t rollbacks changes on child ember objects.
+
+Here I&rsquo;m going to explain how to handle similar situation.
+"/>
+<meta name="twitter:site" content="@kushdilip"/>
+
+
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://kushdilip.github.io/blog/" id="logo"><i class="logo" style="background-image: url('http://kushdilip.github.io/blog/images/logo.png')"></i><span class="site-title">Dilip Kushwaha</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://kushdilip.github.io/blog/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://kushdilip.github.io/blog/categories/">Categories</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://kushdilip.github.io/blog/post/">Archive</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://kushdilip.github.io/blog/quotes/">Quotes</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://kushdilip.github.io/blog/today-i-learned/">TIL</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://kushdilip.github.io/blog/about/">About</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://kushdilip.github.io/blog//images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://kushdilip.github.io/blog/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://kushdilip.github.io/blog/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://kushdilip.github.io/blog/categories/">Categories</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://kushdilip.github.io/blog/post/">Archive</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://kushdilip.github.io/blog/quotes/">Quotes</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://kushdilip.github.io/blog/today-i-learned/">TIL</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://kushdilip.github.io/blog/about/">About</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://kushdilip.github.io/blog/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://kushdilip.github.io/blog//images/avatar.png">
+      <h2 id="name">Dilip</h2>
+      <h3 id="title">Programmer - Blogger - JavaScript</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Bangalore, IN</span>
+      
+          <a id="follow" href="https://twitter.com/kushdilip">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        16
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          35
+          
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+<td><a href="//github.com/kushdilip" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/dilipkushwaha" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+<td><a href="//stackoverflow.com/users/877492" target="_blank" title="Stack Overflow"><i class="fa fa-stackoverflow"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/kushdilip" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/">
+    <h1 class="article-title" itemprop="name">
+        Rollback Ember-Data Model changes completely
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2014-11-05 00:48:54 &#43;0530 &#43;0530" itemprop="datePublished">05 Nov&#39;14</time>
+            &middot;
+            214
+            words
+            &middot;
+            2
+            minute read
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://kushdilip.github.io/blog/categories/ember">Ember</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://kushdilip.github.io/blog/tags/ember">ember</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://kushdilip.github.io/blog/tags/data">data</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://kushdilip.github.io/blog/tags/ember-data">ember-data</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Ember-Data models have a property called <code>isDirty</code>. Whenever you make some changes to local model and it&rsquo;s not yet saved to server, <code>isDirty</code> property will be true.
+Generally our models have various <code>belongsTo</code> and <code>hasMany</code> relationships. So if some child of model gets dirty, then doing <code>model.rollback()</code> doesn&rsquo;t rollbacks changes on child ember objects.</p>
+
+<p>Here I&rsquo;m going to explain how to handle similar situation.</p>
+
+<p>Suppose you have Ember-Data Models called <code>House</code> and <code>Address</code></p>
+
+<p><code>app/models/house.js</code></p>
+
+<pre><code class="language-js">var House = DS.Model.extend({
+	id: DS.attr(&quot;string&quot;),
+	member_count: DS.attr(&quot;number&quot;),
+	address: DS.belongsTo(&quot;Address&quot;)
+})
+</code></pre>
+
+<p><code>app/models/address.js</code></p>
+
+<pre><code class="language-js">var Address = DS.Model.extend({
+	house_no: DS.attr(&quot;number&quot;)
+	Street: DS.attr(&quot;string&quot;)
+	city: DS.attr(&quot;string&quot;)
+	state: DS.attr(&quot;string&quot;)
+})
+</code></pre>
+
+<p>Let&rsquo;s assume I fetched <code>house</code> object from server. In my client application if change <code>member_count</code> to some value say 5.
+<code>house.set(&quot;member_count&quot;, 5)</code>
+Now <code>house.get(&quot;isDirty&quot;)</code> will be true and upon executing <code>house.rollback()</code> will reset the value to original. but if I change something in address object, say <code>house.get('address').set('house_no', 10)</code>. Now <code>house</code> is still clean although it&rsquo;s child <code>address</code> is now dirty.</p>
+
+<p>You can use below code to rollback the entire house as well as it&rsquo;s childs.</p>
+
+<pre><code class="language-js">var deepRollback = function(model) {
+    var that;
+    that = this;
+    if (model.get(&quot;isDirty&quot;)) {
+      model.rollback();
+    }
+    return model.eachRelationship(function(key, relationship) {
+      if (relationship.kind === &quot;belongsTo&quot;) {
+        return that.deepRollback(model.get(key));
+      }
+    });
+  }
+
+</code></pre>
+
+<p>now executing <code>deepRollback(house)</code> will rollback house and all it&rsquo;s <code>belongsTo</code> objects.</p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/" data-id="fcbbcf099497243eb98b12bcef1d12d3" class="article-share-link">
+        Share
+    </a>
+    
+    <a href="http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely//#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Build Hybrid Mobile App with Ionic Framework and Yeoman</div>
+    </a>
+    
+
+    
+    <a href="http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Use different versions of Node.js using NVM</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'kushdilipblog';
+    var disqus_identifier = 'http:\/\/kushdilip.github.io\/blog\/rollback-ember-data-model-changes-completely\/';
+    var disqus_title = 'Rollback Ember-Data Model changes completely';
+    var disqus_url = 'http:\/\/kushdilip.github.io\/blog\/rollback-ember-data-model-changes-completely\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+
+</section>
+
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://kushdilip.github.io/blog/categories/ember">
+                        Ember
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/" class="title">Create Ember Blog App: Part 1</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-01-20 09:48:44 &#43;0530 &#43;0530" itemprop="datePublished">20 Jan&#39;16</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://kushdilip.github.io/blog/technical-debt-resources/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://kushdilip.github.io/blog/images/post-images/technical-debt.jpg)" alt="Rollback Ember-Data Model changes completely" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://kushdilip.github.io/blog/technical-debt-resources/" class="title">Technical debt resources</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-12-17 00:24:32 &#43;0530 &#43;0530" itemprop="datePublished">17 Dec&#39;15</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://kushdilip.github.io/blog/categories/setup">
+                        Setup
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/" class="title">Use different versions of Node.js using NVM</a></p>
+                    <p class="item-date">
+                        <time datetime="2014-11-23 15:14:00 &#43;0530 &#43;0530" itemprop="datePublished">23 Nov&#39;14</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://kushdilip.github.io/blog/tags/.net" style="font-size: 12px;">.net</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/c" style="font-size: 12px;">c</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/c" style="font-size: 12px;">c#</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/code" style="font-size: 12px;">code</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/data" style="font-size: 12px;">data</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/documentation" style="font-size: 12px;">documentation</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ember" style="font-size: 12px;">ember</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ember-cli" style="font-size: 12px;">ember-cli</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ember-data" style="font-size: 12px;">ember-data</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/games" style="font-size: 12px;">games</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ghost-blog" style="font-size: 12px;">ghost-blog</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/gyaan" style="font-size: 12px;">gyaan</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/how-to" style="font-size: 12px;">how-to</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/hybrid" style="font-size: 12px;">hybrid</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ide" style="font-size: 12px;">ide</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ionic" style="font-size: 12px;">ionic</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/javascript" style="font-size: 12px;">javascript</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/jquery" style="font-size: 12px;">jquery</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/links" style="font-size: 12px;">links</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/linux" style="font-size: 12px;">linux</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/linux-mint" style="font-size: 12px;">linux-mint</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/mobile" style="font-size: 12px;">mobile</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/nodejs" style="font-size: 12px;">nodejs</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/nvm" style="font-size: 12px;">nvm</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/resources" style="font-size: 12px;">resources</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/software" style="font-size: 12px;">software</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/sublime-text" style="font-size: 12px;">sublime-text</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/themes" style="font-size: 12px;">themes</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/tools" style="font-size: 12px;">tools</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/tutorial" style="font-size: 12px;">tutorial</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/virtualbox" style="font-size: 12px;">virtualbox</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/vstudio" style="font-size: 12px;">vstudio</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/wcf" style="font-size: 12px;">wcf</a>
+        
+        <a href="http://kushdilip.github.io/blog/tags/windows" style="font-size: 12px;">windows</a>
+        
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://kushdilip.github.io/blog/categories/ember">
+                    ember
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://kushdilip.github.io/blog/categories/ghost-blog">
+                    ghost-blog
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://kushdilip.github.io/blog/categories/how-to">
+                    how-to
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://kushdilip.github.io/blog/categories/programming">
+                    programming
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://kushdilip.github.io/blog/categories/setup">
+                    setup
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://kushdilip.github.io/blog/categories/tools">
+                    tools
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <hr>
+
+<script type="text/javascript">
+var sc_project=9960177; 
+var sc_invisible=0; 
+var sc_security="4141a1cc"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/9960177/0/4141a1cc/0/"
+alt="free web stats"></a></div></noscript>
+
+<a href="http://statcounter.com/p9960177/?guest=1">Traffic
+Stats</a>
+
+
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-47054792-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://kushdilip.github.io/blog/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://kushdilip.github.io/blog/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jquery on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/jquery/</link>
+    <description>Recent content in Jquery on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jan 2014 12:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to use jQuery UI datepicker</title>
+      <link>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</guid>
+      <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First you need to include jQuery UI javascript and css in head of your html page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;  
+ &amp;lt;script type=&amp;quot;text/javascript&amp;quot;  
+      src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+ &amp;lt;link  
+      href=&amp;quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css&amp;quot;  
+      rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;  
+ &amp;lt;script  
+      src=&amp;quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+ &amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Then add following html code in body section of your page where you want datepicker.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;input id=&amp;quot;datepicker&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;  
+      $(document).ready(function() {  
+           $(&amp;quot;#datepicker&amp;quot;).datepicker({  
+                changeMonth : true,  
+                changeYear : true,  
+                dateFormat : &amp;quot;yy-mm-dd&amp;quot;,  
+                altField : &amp;quot;#alternate&amp;quot;,  
+                altFormat : &amp;quot;DD, d MM, yy&amp;quot;,  
+                showButtonPanel : true,  
+                showOtherMonths : true,  
+                selectOtherMonths : true,  
+                showOn : &amp;quot;button&amp;quot;,  
+                buttonImage : &amp;quot;calendar.gif&amp;quot;,  
+                buttonImageOnly : true,  
+                showAnim : &amp;quot;slide&amp;quot;  
+           });  
+      });  
+ &amp;lt;/script&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Above javaScript code runs as soon as the full html page is ready. The various options are for different variation available with the datepicker ui. You can remove and add any option as per the requirements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Suppose you don&amp;rsquo;t want the animation while calendar loads, then remove the last option &amp;lsquo;showAnim : &amp;ldquo;slide&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;You can find different variations at &lt;a href=&#34;http://jqueryui.com/datepicker/&#34;&gt;jQuery UI datepicker&lt;/a&gt;.
+I&amp;rsquo;ll soon upload zip of html file with working the Datepicker.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: This post was originally posted by me only on my other blog dated October 24, 2012&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

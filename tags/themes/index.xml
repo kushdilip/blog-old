@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Themes on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/themes/</link>
+    <description>Recent content in Themes on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Jul 2014 00:19:33 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/themes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Awesome Ghost themes</title>
+      <link>http://kushdilip.github.io/blog/few-pretty-awesome-ghost-themes/</link>
+      <pubDate>Wed, 23 Jul 2014 00:19:33 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/few-pretty-awesome-ghost-themes/</guid>
+      <description>
+
+&lt;p&gt;I was looking for a nice and elegant theme for my newly created Ghost Blog.
+Finally, I selected few of them. I am sharing here the full list and corresponding github links. All these themes are free and open source. The github repositories have full description about how to install and configure the respective themes.&lt;/p&gt;
+
+&lt;p&gt;I felt, all these themes are simple but very intiutive.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Crisp-ghost-theme by  &lt;a href=&#34;http://kathyqian.com/&#34;&gt;kathyqian&lt;/a&gt;&lt;/strong&gt; : This theme looks super simple and crisp as name suggest. &lt;del&gt;&lt;em&gt;I am using it for this blog itself&lt;/em&gt;&lt;/del&gt;. I switched to &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; recently. This &lt;a href=&#34;http://themes.gohugo.io/crisp/&#34;&gt;theme&lt;/a&gt; exists for hugo as well but I have found something better.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/kathyqian/crisp-ghost-theme&#34;&gt;https://github.com/kathyqian/crisp-ghost-theme&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clone of Crisp-ghost-theme by &lt;a href=&#34;https://twitter.com/hbpasti&#34;&gt;hbpasti&lt;/a&gt;&lt;/strong&gt; by  This is just a clone of above theme with few configuration changes. The only reason I listed out it separately is that the above theme didn&amp;rsquo;t work for me. I was getting error saying &lt;code&gt;500 Index.js not found&lt;/code&gt;.
+But this clone works absolutely fine as you can see :).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://bitbucket.org/hbpasti/my-crisp-ghost-theme-config.git&#34;&gt;https://bitbucket.org/hbpasti/my-crisp-ghost-theme-config.git&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Readium&lt;/strong&gt; by &lt;a href=&#34;http://www.svenread.com/&#34;&gt;svenread&lt;/a&gt;:
+Readium is also a very good theme and quite medium like. Simple and sweet. svenread has few other very good ghost themes but those are not free. checkout his website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/starburst1977/readium&#34;&gt;https://github.com/starburst1977/readium&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;StayPuft&lt;/strong&gt; by &lt;a href=&#34;http://davidlecina.com/&#34;&gt;davidlecina&lt;/a&gt;:
+I wanted to use theme but only thing I didn&amp;rsquo;t like was all the posts were showing in full content form. Although it can be configurable by editing templates in code but who cares when other options are available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/dlecina/StayPuft&#34;&gt;https://github.com/dlecina/StayPuft&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Velox&lt;/strong&gt; by &lt;a href=&#34;http://dreyacosta.com/&#34;&gt;dreyacosta&lt;/a&gt;:
+By far this particular theme is best suited for coding blogs. It&amp;rsquo;s very content focus and distraction free. It was first choice but it didn&amp;rsquo;t work for me because of some configuration issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/dreyacosta/velox&#34;&gt;https://github.com/dreyacosta/velox&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;few-more-good-themes-i-found-out-later:762592e811396cbebda323233da7c393&#34;&gt;Few more good themes I found out later:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Purity&lt;/strong&gt; &lt;a href=&#34;http://www.mseri.me/&#34;&gt;Demo&lt;/a&gt; and &lt;a href=&#34;https://gumroad.com/l/purity&#34;&gt;description&lt;/a&gt; I will test out this theme in few days.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Adamcooke&lt;/strong&gt; &lt;a href=&#34;http://adamcooke.io/&#34;&gt;Demo&lt;/a&gt; &lt;a href=&#34;https://github.com/adamcooke/ghost-theme&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Try out these themes and if you have your own collection do share them.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

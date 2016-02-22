@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nvm on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/nvm/</link>
+    <description>Recent content in Nvm on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Nov 2014 15:14:00 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Use different versions of Node.js using NVM</title>
+      <link>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</link>
+      <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</guid>
+      <description>
+
+&lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;
+
+&lt;h4 id=&#34;method-1:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Method 1.&lt;/h4&gt;
+
+&lt;p&gt;For the first method use below command on your terminal to install latest version of Node.js on your ubuntu system&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add cris-lea node ppa repository
+&lt;code&gt;sudo add-apt-repository ppa:chris-lea/node.js&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Update your pacakge manager
+&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install nodejs
+&lt;code&gt;sudo apt-get install nodejs&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check the version of nodejs using &lt;code&gt;node -v&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;method-2:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Method 2.&lt;/h4&gt;
+
+&lt;p&gt;This is a smarter method and gives you more control over &lt;strong&gt;Node.js&lt;/strong&gt; versions.
+&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;NVM&lt;/a&gt; is Node Version Manager which installs and manages different versions of Node.js on your system.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For installing nvm, you need few dependency packages first. You many already have them, if not then you can install them using below command.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install build-essential libssl-dev curl&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download the nvm installation script from nvm &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;GitHub page&lt;/a&gt;. The version number may be different, but normally, you can download and install it using following command:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Above command might fail if you&amp;rsquo;re not a root user. For linux mint the script tries to install in directory &lt;code&gt;/etc/mdm/&lt;/code&gt;. So, You need to change the owner of &lt;code&gt;/etc/mdm/&lt;/code&gt; directory if you are using Linux Mint. Use below command for this situations. Assuming you are logged in as  &lt;code&gt;xyzuser&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;sudo chown -R xyzuser /etc/mdm&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To gain access to the nvm features, you&amp;rsquo;ll need to log out and log in back, or you can source the ~/.profile file so that your current session knows about the changes:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;source ~/.profile&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;few-useful-nvm-commands:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Few useful NVM commands&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find out available Node.js versions.&lt;br/&gt;
+&lt;code&gt;nvm ls-remote&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install a particular version of Node.js&lt;br/&gt;
+&lt;code&gt;nvm install 0.11.33&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use a particular version of Node.js&lt;br/&gt;
+&lt;code&gt;nvm use 0.11.13&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List version of Node.js available on your machine&lt;br/&gt;
+&lt;code&gt;nvm ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set a particular version as default.&lt;br/&gt;
+&lt;code&gt;nvm alias default 0.11.13&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is one caveat. NVM installs Node.js in your home directory and other users can&amp;rsquo;t access it, so you should always have one of stable version of node.js installed using &lt;strong&gt;Method 1&lt;/strong&gt; mentioned above.&lt;/p&gt;
+
+&lt;p&gt;Why so much emphasis on using nvm, because you might be working on different Node.js projects which may work on a particular version and break on others. So using NVM saves a lot of effort.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For more info visit the &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;NVM Github Repository&lt;/a&gt;. For any issue please comment below.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/linux/</link>
+    <description>Recent content in Linux on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Jun 2014 23:14:00 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Zeal : Offline API documentation browser for Linux</title>
+      <link>http://kushdilip.github.io/blog/zeal-offline-api-documentation-browser-for-linux/</link>
+      <pubDate>Sun, 15 Jun 2014 23:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/zeal-offline-api-documentation-browser-for-linux/</guid>
+      <description>
+
+&lt;p&gt;Quoted from zealdocs.org &amp;ldquo;Zeal is a simple offline API documentation browser inspired by &lt;a href=&#34;http://kapeli.com/dash&#34;&gt;Dash&lt;/a&gt; (OS X app), available Linux and Windows&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Zeal gives you offline API documentation for most of the Libraries out there like Angular, Backbone, Django and many more. You can check the list on Dash&amp;rsquo;s &lt;a href=&#34;http://kapeli.com/dash#docsets&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can easily install on Ubuntu 14.04 by following steps&lt;/p&gt;
+
+&lt;h5 id=&#34;run-following-commands-in-terminal-one-by-one:222abb6b20f3ae6bd922e173abdbf41b&#34;&gt;Run following commands in terminal one by one&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:jerzy-kozera/zeal-ppa
+sudo apt-get update
+sudo apt-get install zeal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After installing Zeal it can be started from terminal by typing &lt;code&gt;zeal&lt;/code&gt;. Add it to to Startup Application for quick access via hotkey which can be configured in &lt;code&gt;zeal&lt;/code&gt; configurations.&lt;/p&gt;
+
+&lt;h4 id=&#34;issues-faced-and-solutions:222abb6b20f3ae6bd922e173abdbf41b&#34;&gt;Issues faced and Solutions&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I faced a minor issue after installing Zeal. I was not able to see main menu on top of it from where you can I found solution at &lt;a href=&#34;https://github.com/jkozera/zeal/issues/134&#34;&gt;zeal issues&lt;/a&gt; . I tried removing appmenu-qt5 package which worked from me.&lt;/li&gt;
+&lt;li&gt;Every time starting Zeal will show a popup that it&amp;rsquo;s Hotkey is confliting with system&amp;rsquo;s. So I changed it&amp;rsquo;s default Hotkey from Alt + Space to Ctrl + Shift + Space (&lt;a href=&#34;http://kushdilip.com/blog/installing-synapse-launcher-in-ubuntu-14-04/&#34;&gt;Synapse&lt;/a&gt; is already using Ctrl + Space)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

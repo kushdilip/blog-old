@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Mint on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/linux-mint/</link>
+    <description>Recent content in Linux Mint on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Aug 2014 21:45:36 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/linux-mint/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Install Conky in Linux Mint / Ubuntu</title>
+      <link>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</link>
+      <pubDate>Sun, 31 Aug 2014 21:45:36 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://conky.sourceforge.net/&#34;&gt;Conky&lt;/a&gt; is a free, light-weight system monitor for X, that displays various system information on your desktop. Using conky you can add diffrent kind of cool widgets to your Desktop. These widget can be used to monitor various system activities, ram &amp;amp; cpu usage or simply to show Date &amp;amp; Time.&lt;/p&gt;
+
+&lt;p&gt;In this post I will explain how you can install &lt;strong&gt;Conky&lt;/strong&gt; in Linux Mint and Ubuntu.&lt;/p&gt;
+
+&lt;h4 id=&#34;conky-installation:4c1a56dd2db69fbaf5fc91fac05fb8f2&#34;&gt;Conky Installation&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install &lt;code&gt;conky&lt;/code&gt; and &lt;code&gt;conky-all&lt;/code&gt; using terminal or synaptic. Type below command in terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install conky &amp;amp;&amp;amp; conky-all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;conky-all&lt;/code&gt;, you can install &lt;code&gt;conky-std&lt;/code&gt;. But it&amp;rsquo;s better to go with &lt;code&gt;conky-all&lt;/code&gt; because it gives you all available features.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After installing run it using by typing &lt;code&gt;conky&lt;/code&gt; in terminal
+&lt;code&gt;
+$ conky
+&lt;/code&gt;
+It&amp;rsquo;s better to add conky to startup appliations. Here is how default conky looks in Mint.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31152119_zpsc880a021.png&#34; alt=&#34;conky-default&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The default conky widgets look very boring. You should definitely install &lt;code&gt;conky-manager&lt;/code&gt; to configure, add more themes and widgets to conky. Use below commands to install conky-manager.
+&lt;code&gt;
+$ sudo add-apt-repository ppa:teejee2008/ppa
+$ sudo apt-get update
+$ sudo apt-get install conky-manager
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the screenshots of conky-manager. You can see preinstalled widgets, themes. You can also see previews below the lists.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31213903_zps8c819e42.png&#34; alt=&#34;conky-manager-widgets&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31213909_zps72df3158.png&#34; alt=&#34;conky-managet-themes&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I have chosen &lt;strong&gt;Green Apple Desktop&lt;/strong&gt; theme. Here is how it looks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31212031_zps01f2e4bf.png&#34; alt=&#34;conky-green-apple&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, you can download more themes and widgets from internet and experiment with conky to make it more cool.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

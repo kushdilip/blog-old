@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/categories/tools/</link>
+    <description>Recent content in Tools on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Aug 2014 21:45:36 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Install Conky in Linux Mint / Ubuntu</title>
+      <link>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</link>
+      <pubDate>Sun, 31 Aug 2014 21:45:36 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://conky.sourceforge.net/&#34;&gt;Conky&lt;/a&gt; is a free, light-weight system monitor for X, that displays various system information on your desktop. Using conky you can add diffrent kind of cool widgets to your Desktop. These widget can be used to monitor various system activities, ram &amp;amp; cpu usage or simply to show Date &amp;amp; Time.&lt;/p&gt;
+
+&lt;p&gt;In this post I will explain how you can install &lt;strong&gt;Conky&lt;/strong&gt; in Linux Mint and Ubuntu.&lt;/p&gt;
+
+&lt;h4 id=&#34;conky-installation:4c1a56dd2db69fbaf5fc91fac05fb8f2&#34;&gt;Conky Installation&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install &lt;code&gt;conky&lt;/code&gt; and &lt;code&gt;conky-all&lt;/code&gt; using terminal or synaptic. Type below command in terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install conky &amp;amp;&amp;amp; conky-all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;conky-all&lt;/code&gt;, you can install &lt;code&gt;conky-std&lt;/code&gt;. But it&amp;rsquo;s better to go with &lt;code&gt;conky-all&lt;/code&gt; because it gives you all available features.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After installing run it using by typing &lt;code&gt;conky&lt;/code&gt; in terminal
+&lt;code&gt;
+$ conky
+&lt;/code&gt;
+It&amp;rsquo;s better to add conky to startup appliations. Here is how default conky looks in Mint.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31152119_zpsc880a021.png&#34; alt=&#34;conky-default&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The default conky widgets look very boring. You should definitely install &lt;code&gt;conky-manager&lt;/code&gt; to configure, add more themes and widgets to conky. Use below commands to install conky-manager.
+&lt;code&gt;
+$ sudo add-apt-repository ppa:teejee2008/ppa
+$ sudo apt-get update
+$ sudo apt-get install conky-manager
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the screenshots of conky-manager. You can see preinstalled widgets, themes. You can also see previews below the lists.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31213903_zps8c819e42.png&#34; alt=&#34;conky-manager-widgets&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31213909_zps72df3158.png&#34; alt=&#34;conky-managet-themes&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I have chosen &lt;strong&gt;Green Apple Desktop&lt;/strong&gt; theme. Here is how it looks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31212031_zps01f2e4bf.png&#34; alt=&#34;conky-green-apple&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, you can download more themes and widgets from internet and experiment with conky to make it more cool.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Zeal : Offline API documentation browser for Linux</title>
+      <link>http://kushdilip.github.io/blog/zeal-offline-api-documentation-browser-for-linux/</link>
+      <pubDate>Sun, 15 Jun 2014 23:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/zeal-offline-api-documentation-browser-for-linux/</guid>
+      <description>
+
+&lt;p&gt;Quoted from zealdocs.org &amp;ldquo;Zeal is a simple offline API documentation browser inspired by &lt;a href=&#34;http://kapeli.com/dash&#34;&gt;Dash&lt;/a&gt; (OS X app), available Linux and Windows&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Zeal gives you offline API documentation for most of the Libraries out there like Angular, Backbone, Django and many more. You can check the list on Dash&amp;rsquo;s &lt;a href=&#34;http://kapeli.com/dash#docsets&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can easily install on Ubuntu 14.04 by following steps&lt;/p&gt;
+
+&lt;h5 id=&#34;run-following-commands-in-terminal-one-by-one:222abb6b20f3ae6bd922e173abdbf41b&#34;&gt;Run following commands in terminal one by one&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:jerzy-kozera/zeal-ppa
+sudo apt-get update
+sudo apt-get install zeal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After installing Zeal it can be started from terminal by typing &lt;code&gt;zeal&lt;/code&gt;. Add it to to Startup Application for quick access via hotkey which can be configured in &lt;code&gt;zeal&lt;/code&gt; configurations.&lt;/p&gt;
+
+&lt;h4 id=&#34;issues-faced-and-solutions:222abb6b20f3ae6bd922e173abdbf41b&#34;&gt;Issues faced and Solutions&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I faced a minor issue after installing Zeal. I was not able to see main menu on top of it from where you can I found solution at &lt;a href=&#34;https://github.com/jkozera/zeal/issues/134&#34;&gt;zeal issues&lt;/a&gt; . I tried removing appmenu-qt5 package which worked from me.&lt;/li&gt;
+&lt;li&gt;Every time starting Zeal will show a popup that it&amp;rsquo;s Hotkey is confliting with system&amp;rsquo;s. So I changed it&amp;rsquo;s default Hotkey from Alt + Space to Ctrl + Shift + Space (&lt;a href=&#34;http://kushdilip.com/blog/installing-synapse-launcher-in-ubuntu-14-04/&#34;&gt;Synapse&lt;/a&gt; is already using Ctrl + Space)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installing Synapse launcher in Ubuntu 14.04</title>
+      <link>http://kushdilip.github.io/blog/installing-synapse-launcher-in-ubuntu-14-04/</link>
+      <pubDate>Sun, 08 Jun 2014 10:50:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/installing-synapse-launcher-in-ubuntu-14-04/</guid>
+      <description>
+
+&lt;p&gt;I recently upgraded from Ubuntu 12.04 LTS to 14.04. I was quite used to of the Awesome Synapse launcher on Ubuntu 12.04. Just press Ctrl + Space and synapse is there to serve you.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately Synapse is not directly available through Software Centre in 14.04. But you can install through testing PPA. just follow this steps&lt;/p&gt;
+
+&lt;h5 id=&#34;1-open-terminal-and-add-the-ppa-and-press-enter:640754f7761faf35ac18ff82461f4765&#34;&gt;1 . Open terminal and add the ppa and press Enter&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-add-repository ppa:synapse-core/testing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;2-now-update-the-software-repository-and-after-that-install-synapse:640754f7761faf35ac18ff82461f4765&#34;&gt;2 . Now update the Software Repository and after that install synapse&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install synapse
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Now enjoy the awesomeness of Synapse.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test WCF Service with WCF Test Client without installing Visual Studio</title>
+      <link>http://kushdilip.github.io/blog/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</link>
+      <pubDate>Thu, 20 Feb 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</guid>
+      <description>&lt;p&gt;There are various tools to test WCF services. Visual studio installation comes with default tool called WCF Test Client, which can be run from Visual Studio Command Prompt by typing wcftestclient.&lt;/p&gt;
+
+&lt;p&gt;Alternatively for &lt;strong&gt;VS 2010&lt;/strong&gt; you can navigate to &lt;code&gt;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\&lt;/code&gt; where you can find and open &lt;code&gt;WcfTestClient.exe&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/wcftestclient_zps51e80bc6.png&#34; alt=&#34;wcftest_screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, That was the easy part. What if you are on a machine without Visual Studio or .NET installed and you can&amp;rsquo;t install anything. Such condition arises when you want to test services on a test machine inside Microsoft Test Manager.
+There can be two solutions&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Either find and copy all the wcftestclient.exe and dependent .dll files from some machine which has VS installed to your test machine.(not quite easy)&lt;/li&gt;
+&lt;li&gt;Or find offline version of wcftestclient and somehow transfer it to test machine. (easy but it&amp;rsquo;s hard to find the offline version)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I was in similar situation and somewhere on internet I found this offline zip package of wcftestfclient. It can be downloaded from this google drive &lt;a href=&#34;https://drive.google.com/file/d/0B9Ls5oqJy_3paGFIZXB2cDRWdFk/edit?usp=sharing&#34;&gt;link&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;There is one more popular tool to test wcf service, called &lt;a href=&#34;http://www.wcfstorm.com/wcf/Default.aspx&#34;&gt;WCF Storm&lt;/a&gt;. The trial version has very limited functionality.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Play Classic Dave game in windows 7 32 bit using DOSBOX</title>
+      <link>http://kushdilip.github.io/blog/play-classic-dave-game-in-windows-7-32-bit-using-dosbox/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/play-classic-dave-game-in-windows-7-32-bit-using-dosbox/</guid>
+      <description>&lt;p&gt;Remember the Classic Dave game you might have played more than 10 years ago. That was the first game I played on PC. I liked it a lot. But it&amp;rsquo;s not possible to play Dave directly on Windows 7 32 bit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/dangerousdave_zpsa0525748.jpg&#34; alt=&#34;dangerous_dave&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this post I will explain, how to play one of the best classic Dos game on Windows 7 32 bit machine.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download Dave game from &lt;a href=&#34;http://www.dosgamesarchive.com/download/dangerous-dave/&#34;&gt;http://www.dosgamesarchive.com/download/dangerous-dave/&lt;/a&gt; or this google drive &lt;a href=&#34;https://drive.google.com/file/d/0B9Ls5oqJy_3pSEhuak5hQzd0Mmc/edit?usp=sharing&#34;&gt;link&lt;/a&gt;. Extract it in D:\ directory . It will look like this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/dave_directory_zpse11e2fa4.png&#34; alt=&#34;dave_directory&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Download DOSBox from &lt;a href=&#34;http://www.dosbox.com/&#34;&gt;http://www.dosbox.com/&lt;/a&gt; or this direct link &lt;a href=&#34;https://drive.google.com/file/d/0B9Ls5oqJy_3pZk9XTWxXeXVNWWM/edit?usp=sharing&#34;&gt;google drive link&lt;/a&gt;. It&amp;rsquo;s a DOS emulator for windows 7. If you don&amp;rsquo;t have administrator access install in directory other than C:\
+Install DOSBox and open it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Type in following command one by one in DOSBox. Press Enter after each command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mount c d:\
+c:
+cd dave
+dave
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It looks like this&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/dave_cmd_zpse870d3f4.png&#34; alt=&#34;dosbox&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally you&amp;rsquo;ll have Dave running &amp;hellip; Enjoy!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/dave_gameplay_zpsb6472724.png&#34; alt=&#34;dave_game_play&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Please leave comments if you face any issue.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use Qt Creator as full fledged C&#43;&#43; IDE</title>
+      <link>http://kushdilip.github.io/blog/use-qt-creator-as-full-fledged-c-ide/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/use-qt-creator-as-full-fledged-c-ide/</guid>
+      <description>&lt;p&gt;I was putting efforts to learn C++ for so many months but didn&amp;rsquo;t find any suitable IDE on which I can practice. Then few months ago, one of my friend introduced me to Qt Creator, as one of the best IDE for C++. During the free time in this summer I gave it a try and started learning the language with the help of a ebook on this IDE. And surprisingly, I found Qt Creator to be perfect in so many ways. Every feature I was looking for previously, is  available in it.&lt;/p&gt;
+
+&lt;p&gt;Even though, Qt Creator is basically designed for development of Qt applications but It has everything to become a full fledged C++ IDE. I tried it on ubuntu till now. It can be installed directly from software Center. Windows version is also available for download on &lt;a href=&#34;http://qt-project.org/downloads&#34;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;####To properly compile and run C++ projects do as following.
+- Create a new C++ Project by first clicking on &lt;code&gt;File -&amp;gt; New File&lt;/code&gt; or Project then select &lt;code&gt;Other Projects -&amp;gt; C++ Project&lt;/code&gt; and follow the instructions.&lt;/p&gt;
+
+&lt;p&gt;&lt;/br&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/qtmenu_zps21001adc.png&#34; alt=&#34;QT Creator New Project&#34; &gt;
+  &lt;figcaption&gt;New QT Project&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You will get checkbox of shadow build, by checking it you can be sure that the source files will be in separate folder than build files.&lt;/li&gt;
+&lt;li&gt;Now select the Project mode by clicking on the box below debug box in left side pane. Here go to Run Settings and check the Run in terminal.&lt;/li&gt;
+&lt;li&gt;Now go to Tool menu and select &lt;code&gt;Options-&amp;gt;Environment -&amp;gt; General . Here look for Terminal in System. Enter /usr/bin/X11/xterm -e instead of existing text.&lt;/code&gt;
+QtCreator is ready to compile and run your C++ projects. Use Ctrl + B to build and Ctrl + R to run or use buttons given at bottom in left panel for build and run or you can use build menu.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;####To enable C++11 support do as following.
+- Find the your_project_name.pro file in your project hierarchy in Qt Creator. Just add  following line in this .pro file to enable the support&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    `QMAKE_CXXFLAGS += -std=c++0x (or -std=gnu++0x)`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/br&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/qtconfig_zps52ede2e2.png&#34; alt=&#34;QT Project Config&#34; &gt;
+  &lt;figcaption&gt;QT Project Config&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This .pro file is used qmake tool to generate makefile for your project. The above line adds flag &lt;code&gt;-std=c++0x(or -std=gnu++0x)&lt;/code&gt; to &lt;code&gt;CXFLAGS&lt;/code&gt; in the &lt;code&gt;makefile&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;After changing anything in .pro file right click on project and Run qmake so as to generate final Makefile in your build folder
+Qt Creator has many attractive features like&lt;/li&gt;
+&lt;li&gt;Autoindentation of selected code by pressing Ctrl + /&lt;/li&gt;
+&lt;li&gt;Autocomplete feature is awesome and better than almost all other IDEs&lt;/li&gt;
+&lt;li&gt;Beautiful animations.&lt;/li&gt;
+&lt;li&gt;Split screen using shortcuts like  &lt;code&gt;Ctrl + E, 2&lt;/code&gt; or &lt;code&gt;Ctrl + E, 3&lt;/code&gt; or &lt;code&gt;Ctrl + E, 0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Switch Header/Source using &lt;code&gt;F4&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Switch declaration/definition using &lt;code&gt;Ctrl + Left Click&lt;/code&gt;.
+Many more features can be found out by using the it. So Install and Experience one of the Best C++ IDE available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Disclaimer: This post was originally posted by me only on my other blog dated May 14, 2012&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

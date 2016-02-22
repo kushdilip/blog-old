@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How To on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/categories/how-to/</link>
+    <description>Recent content in How To on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Sep 2014 17:42:01 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/categories/how-to/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Build Hybrid Mobile App with Ionic Framework and Yeoman</title>
+      <link>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
+      <pubDate>Sun, 28 Sep 2014 17:42:01 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
+      <description>
+
+&lt;p&gt;The hybrid app technolgoies have revolutioned the development of cross platform mobile applications.
+There are various free and licenced platform in market for building beautiful cross platform apps e.g. &lt;a href=&#34;http://phonegap.com/&#34;&gt;Phonegap&lt;/a&gt;, &lt;a href=&#34;http://www.appcelerator.com/titanium/&#34;&gt;Titanium&lt;/a&gt;, &lt;a href=&#34;http://www.sencha.com/products/touch&#34;&gt;Sencha Touch&lt;/a&gt; and &lt;a href=&#34;https://crosswalk-project.org/&#34;&gt;CrossWalk&lt;/a&gt;.
+Most popular one is &lt;strong&gt;Phonegap&lt;/strong&gt;. It uses Webkit rendering engine.While &lt;strong&gt;Crosswalk&lt;/strong&gt; is similar but developed by Intel and supports latest Blink rendering engine used in latest chrome browsers.&lt;/p&gt;
+
+&lt;p&gt;There is a new Platform in market called &lt;a href=&#34;http://ionicframework.com/&#34;&gt;Ionic Framework&lt;/a&gt;. It is free and Open source. Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps. There is a vibrant community behind Ionic. It utilizes &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;, which is one of the most popular frontend javascript framework. Though it internally used phonegap to build and package the apps for Android and iOS platforms&lt;/p&gt;
+
+&lt;p&gt;There are a lot of Resources on Ionic Website. Here I am going to explain how to build your first Ionic cross platform app using &lt;a href=&#34;http://ionicframework.com/&#34;&gt;Ionic&lt;/a&gt; and &lt;a href=&#34;http://yeoman.io/&#34;&gt;Yeoman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yeoman.io&#34;&gt;Yeoman&lt;/a&gt; is scaffolding tool, which has lots of generators available and scaffolds full project structure with necessary libraries for you. Today most of the web developers use Yeoman aka Yo for web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;&lt;em&gt;So Let&amp;rsquo;s Start&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;1-install-and-setup-node-js-and-npm:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;1. Install and Setup &lt;code&gt;Node.js&lt;/code&gt; and &lt;code&gt;npm&lt;/code&gt;.&lt;/h4&gt;
+
+&lt;p&gt;Even though there are thousands of tutorials available for Installing Node.js, I&amp;rsquo;ll explain here easiest method for Ubuntu 14.04 and Mint 17.
+If you have Node installed already then skip to next step.&lt;/p&gt;
+
+&lt;p&gt;Run below commands in terminal, which will also install &lt;code&gt;npm&lt;/code&gt; package manager.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  $ sudo add-apt-repository ppa:chris-lea/node.js
+  $ sudo apt-get update
+  $ sudo apt-get install nodejs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-install-ionic-framework-cordova-and-other-npm-packages:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;2. Install Ionic Framework, cordova and other npm packages&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run below command to install &lt;code&gt;cordova&lt;/code&gt; and &lt;code&gt;ionic&lt;/code&gt; globally using &lt;code&gt;npm&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g cordova ionic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;ll need few other package for build process later on, which can also be installed using npm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g grunt bower yeoman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;ll also need &lt;a href=&#34;http://yeoman.io/generators/&#34;&gt;yeoman generator&lt;/a&gt; for Ionic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g generator-ionic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-create-and-build-ionic-project:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;3. Create and build Ionic project&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create directory named &lt;code&gt;my-ionic-project&lt;/code&gt; and navigate to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd my-ionic-project &amp;amp;&amp;amp; cd $_
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now run ionic generator using &lt;code&gt;yo&lt;/code&gt; cammand&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ yo ionic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These will present you and interactive terminal. Answer &lt;code&gt;No&lt;/code&gt; for &lt;code&gt;Saas&lt;/code&gt;, you won&amp;rsquo;t need it now. Don&amp;rsquo;t add other plugins packages for now. It will also ask for Starter Template, Choose 3rd option Side Menu.&lt;/p&gt;
+
+&lt;p&gt;All of these looks like below&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ yo ionic
+    _             _
+   (_)           (_)
+    _  ___  _ __  _  ___
+   | |/ _ \| &#39;_ \| |/ __|
+   | | (_) | | | | | (__
+   |_|\___/|_| |_|_|\___|
+
+[?] Would you like to use Sass with Compass (requires Ruby)? No
+Created a new Cordova project with name &amp;quot;Temp&amp;quot; and id &amp;quot;com.example.Temp&amp;quot;
+[?] Which Cordova plugins would you like to include? org.apache.cordova.console, org.apache.cordova.device
+[?] Which starter template [T] or example app [A] would you like to use? [T] Side Menu
+...
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It will generate a folder structure for you similar to this&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/my-ionic-project_zps677308c0.png&#34; alt=&#34;my-ionic-project&#34; &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-testing-application-on-browser:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;3. Testing Application on browser.&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run below command from your project directory to run the web application server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ grunt serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You can test the application on &lt;code&gt;http://localhost:9000&lt;/code&gt; in any browser.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you want to change the port, you can do so from &lt;code&gt;Gruntfile.js&lt;/code&gt; in root of your project.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;if you are connected to local network or wifi, then change &lt;code&gt;hostname&lt;/code&gt; value in &lt;code&gt;Gruntfile.js&lt;/code&gt; to &lt;code&gt;0.0.0.0&lt;/code&gt; and now find out your machine ip using ifconfig. e.g. if it is &lt;code&gt;192.168.2.4&lt;/code&gt; then you can the app from any device in the same network by pointing their browser to &lt;code&gt;http://192.168.2.4:9000&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-running-on-android-device:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;4. Running on Android Device&lt;/h4&gt;
+
+&lt;p&gt;To run your first ionic application on actual mobile platform like android, follow below steps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add and build cordova platform for Android in project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cordova platform add android
+$ grunt cordova
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now pick &lt;strong&gt;MyIonicProject-debug-unaligned.apk&lt;/strong&gt; from &lt;code&gt;my-ionic-project/platforms/android/ant-build/&lt;/code&gt; and move it to your device by connecting via USB or dropbox or Google Drive or anything else you like. And then install it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Follow the tutorial and let me know through comments if you face any problem.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Add Reindent keyboard shortcut to Sublime-Text 3</title>
+      <link>http://kushdilip.github.io/blog/add-reindent-keyboard-shortcut-to-sublime-text-3/</link>
+      <pubDate>Mon, 26 May 2014 00:05:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/add-reindent-keyboard-shortcut-to-sublime-text-3/</guid>
+      <description>&lt;p&gt;I like my code to be always properly formatted, which makes it easier to read and understand. I use Sublime-text for coding and it has Reindent feature which can be found at &lt;code&gt;Edit&amp;gt;&amp;gt;Line&amp;gt;&amp;gt;Reindent&lt;/code&gt; ,but everybody wants a keyboard shortcut.&lt;/p&gt;
+
+&lt;p&gt;Here is how you can add this shortcut in sublime&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Go to &lt;strong&gt;&lt;code&gt;Preferences &amp;gt;&amp;gt; Key Bindings-User &amp;gt;&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now add below key value pair to existing json array (mostly it would be empty previously)  &lt;strong&gt;&lt;code&gt;{ &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+r&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reindent&amp;quot;}&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;My file contents looks like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+{ &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+r&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reindent&amp;quot;}
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;ctrl+shift+r&lt;/code&gt; you can have any other shortcut you like eg. &lt;code&gt;f12&lt;/code&gt;, &lt;code&gt;ctrl+r&lt;/code&gt; &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;And remember, To make this shortcut work , you need to have syntax highlighter plugin already installed for the particular programming language you are using.&lt;/p&gt;
+
+&lt;p&gt;Thats it for now. Enjoy the beautiful code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Accessing Guest (VirtualBox) Node.js Application from Windows/Ubuntu Host</title>
+      <link>http://kushdilip.github.io/blog/accessing-guest-virtualbox-node-js-application-from-windowsubuntu-host/</link>
+      <pubDate>Mon, 24 Feb 2014 01:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/accessing-guest-virtualbox-node-js-application-from-windowsubuntu-host/</guid>
+      <description>
+
+&lt;p&gt;If you are running a Node.js Application inside a Ubuntu VirtualBox machine and want to test the same application in any browser inside your Windows/Ubuntu Host OS, then follow this small tutorial. You can even test the application on any other device in same wifi or lan network as your Host/Guest Machine.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-primary-reasons-i-wanted-this-kind-of-hack-were:08b1cbb7271c37fd1106906a6aaf3327&#34;&gt;The primary reasons I wanted this kind of hack were:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Guest machine becomes slow and laggy if you start any browser in it to test your applications.&lt;/li&gt;
+&lt;li&gt;Sometime you just want to use terminal.&lt;/li&gt;
+&lt;li&gt;Test the Web Application in mobile or tablet device.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am explaining here the steps to make it work.&lt;/p&gt;
+
+&lt;h4 id=&#34;virtual-box-settins:08b1cbb7271c37fd1106906a6aaf3327&#34;&gt;Virtual Box Settins&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make sure the guest OS for which you are setting up is not running.&lt;/li&gt;
+&lt;li&gt;Now Open Virtual Box Manager and Select the machine.&lt;/li&gt;
+&lt;li&gt;Go to Settings -&amp;gt; Network -&amp;gt; Adapter 1(first tab). Network Adapter should be enabled here.&lt;/li&gt;
+&lt;li&gt;In Attached to: DropDown select Bridged Adapter&lt;/li&gt;
+&lt;li&gt;In Name:Dropdown, Select WiFi or LAN Adapter to which other devices will be connected. I have selected WiFi because my mobile, tablet and laptop are connected to it.&lt;/li&gt;
+&lt;li&gt;That’s it. Now start your Guest OS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/virtualBox_zpsb165a320.png&#34; alt=&#34;VirtualBox Setting&#34; &gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;changes-in-node-js-server:08b1cbb7271c37fd1106906a6aaf3327&#34;&gt;Changes in Node.js Server&lt;/h4&gt;
+
+&lt;p&gt;I assume you are already familiar with Node.js. Below is the simple code that I have taken from &lt;a href=&#34;nodejs.org&#34;&gt;nodejs.org&lt;/a&gt;,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var http = require(&#39;http&#39;);
+var PORT = 1337;  //Can be any open port
+var IP = &#39;127.0.0.1&#39;; //for localhost
+http.createServer(function (req, res) {
+  res.writeHead(200, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
+  res.end(&#39;Hello World\n&#39;);
+}).listen(PORT, IP);
+console.log(&#39;Server running at http://&#39;+ IP + &#39;:&#39;+ PORT + &#39;/&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only change we have to do here is assingn &lt;code&gt;0.0.0.0&lt;/code&gt; to IP instead of standard &lt;code&gt;127.0.0.1&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var IP = &#39;0.0.0.0&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Put the code in a file named server.js and run node server.js in it’s file path.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ node /path/to/file/server.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/serverrunning_zps12417819.png&#34; alt=&#34;terminal&#34; &gt;&lt;/p&gt;
+
+&lt;p&gt;Now go to terminal and find ip of your virtual machine by typing ifconfig. It will give you some local ip address for &lt;code&gt;eth0&lt;/code&gt;. I am getting &lt;code&gt;192.168.2.10&lt;/code&gt;.
+That’s it. Now open any browser in Host machine. Type url with above above IP and assigned PORT in &lt;code&gt;server.js&lt;/code&gt; like this
+&lt;code&gt;http://192.168.2.10:1337&lt;/code&gt;
+For other devices like mobile, tablet or any machine on same network, use same url &lt;code&gt;http://192.168.2.10:1337&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is the screenshot from my mobile device&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/3cf7e926-efad-470b-b02f-09383ce5b891_zps1a788487.png&#34; alt=&#34;screenshot mobile phone&#34; &gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Please comment for any doubts.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sublime Text on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/tags/sublime-text/</link>
+    <description>Recent content in Sublime Text on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 May 2014 00:05:00 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/tags/sublime-text/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Add Reindent keyboard shortcut to Sublime-Text 3</title>
+      <link>http://kushdilip.github.io/blog/add-reindent-keyboard-shortcut-to-sublime-text-3/</link>
+      <pubDate>Mon, 26 May 2014 00:05:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/add-reindent-keyboard-shortcut-to-sublime-text-3/</guid>
+      <description>&lt;p&gt;I like my code to be always properly formatted, which makes it easier to read and understand. I use Sublime-text for coding and it has Reindent feature which can be found at &lt;code&gt;Edit&amp;gt;&amp;gt;Line&amp;gt;&amp;gt;Reindent&lt;/code&gt; ,but everybody wants a keyboard shortcut.&lt;/p&gt;
+
+&lt;p&gt;Here is how you can add this shortcut in sublime&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Go to &lt;strong&gt;&lt;code&gt;Preferences &amp;gt;&amp;gt; Key Bindings-User &amp;gt;&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now add below key value pair to existing json array (mostly it would be empty previously)  &lt;strong&gt;&lt;code&gt;{ &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+r&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reindent&amp;quot;}&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;My file contents looks like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+{ &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+r&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;reindent&amp;quot;}
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;ctrl+shift+r&lt;/code&gt; you can have any other shortcut you like eg. &lt;code&gt;f12&lt;/code&gt;, &lt;code&gt;ctrl+r&lt;/code&gt; &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;And remember, To make this shortcut work , you need to have syntax highlighter plugin already installed for the particular programming language you are using.&lt;/p&gt;
+
+&lt;p&gt;Thats it for now. Enjoy the beautiful code.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

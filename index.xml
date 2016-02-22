@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog/</link>
+    <description>Recent content on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Feb 2016 19:28:38 +0530</lastBuildDate>
+    <atom:link href="http://kushdilip.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Recursively rename file folder names</title>
+      <link>http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/</link>
+      <pubDate>Mon, 22 Feb 2016 19:28:38 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/</guid>
+      <description>&lt;p&gt;Below commands will help you recursively rename file &amp;amp; folder names&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First install zsh
+&lt;a href=&#34;http://strcat.de/zsh/#zmv&#34;&gt;http://strcat.de/zsh/#zmv&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;run the commands in shell&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ zsh
+$ autoload zmv
+$ zmv -W &#39;**/*dk*&#39; &#39;**/*kd*’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For reference &lt;a href=&#34;http://www.drbunsen.org/batch-file-renaming/&#34;&gt;http://www.drbunsen.org/batch-file-renaming/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Syncing git repo fork with upstream</title>
+      <link>http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/</link>
+      <pubDate>Sat, 13 Feb 2016 22:38:57 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/</guid>
+      <description>&lt;p&gt;Sometimes we fork git repositories and use the forked repo in our projects. But these fork repos get outdated as the upstream repo maintainers keep pushing commits.
+Here I will give you few commands to sync the forked repos with upstream repository.&lt;/p&gt;
+
+&lt;p&gt;1 . &lt;a href=&#34;https://help.github.com/articles/configuring-a-remote-for-a-fork/&#34;&gt;First is configuring a remote for a fork&lt;/a&gt;
+In terminal run &lt;code&gt;git remote -v&lt;/code&gt; which will give you fetch and push origins pointing to your forked repo.&lt;/p&gt;
+
+&lt;p&gt;for e.g. if I run the command for this project &lt;a href=&#34;https://github.com/kushdilip/hugo-icarus-theme&#34;&gt;https://github.com/kushdilip/hugo-icarus-theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+origin	https://github.com/kushdilip/hugo-icarus-theme.git (fetch)
+origin	https://github.com/kushdilip/hugo-icarus-theme.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2 . Now add point upstream repo using below command. On github projects you can see the link to repo you forked from.
+&lt;code&gt;git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now my &lt;code&gt;git remote -v&lt;/code&gt; gives&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+origin	https://github.com/kushdilip/hugo-icarus-theme.git (fetch)
+origin	https://github.com/kushdilip/hugo-icarus-theme.git (push)
+upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (fetch)
+upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3 . &lt;a href=&#34;https://help.github.com/articles/syncing-a-fork/&#34;&gt;Merging forked master with upstream master&lt;/a&gt;
+  - run &lt;code&gt;git fetch upstream&lt;/code&gt;
+  - now &lt;code&gt;git checkout master&lt;/code&gt;
+  - finally &lt;code&gt;git merge upstream/master&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Binding style attribute and safestring in Ember</title>
+      <link>http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/</link>
+      <pubDate>Sat, 13 Feb 2016 19:53:42 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/</guid>
+      <description>&lt;p&gt;Many times we want to have custom styles in our ember templates which are controlled via controller/components.&lt;/p&gt;
+
+&lt;p&gt;For above purpose we can form the whole style string as computed property and do the binding in htmlbars, but there are two things we need to take care of
+  1. Don&amp;rsquo;t put quotes around that binding property in template.
+  2. return safeString value from computed property&lt;/p&gt;
+
+&lt;p&gt;Below code demonstrates how to do that.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;components/x-component.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;export default Ember.Component.extend({
+  progress: 0,
+  barWidth: Ember.computed(&#39;progress&#39;, {
+    get(){
+      return Ember.String.htmlSafe(`width: ${this.get(&#39;progress&#39;)}%`);
+    }
+  })
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the usage of  &lt;code&gt;Ember.String.htmlSafe&lt;/code&gt; in above code, and template strings  in computed property.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;templates/components/x-component.hbs&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;progress-bar&amp;quot; style={{barWidth}}&amp;gt;...&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the no quotes around &lt;code&gt;{{barWidth}}&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Things I want to Learn/Read/Watch</title>
+      <link>http://kushdilip.github.io/blog/things-i-want-to-learn/</link>
+      <pubDate>Fri, 12 Feb 2016 00:32:07 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/things-i-want-to-learn/</guid>
+      <description>
+
+&lt;h2 id=&#34;javascript:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Javascript&lt;/h2&gt;
+
+&lt;h3 id=&#34;blog-articles-lists:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Blog/Articles/lists&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://github.com/sgaurav/understanding-es6&#34;&gt;https://github.com/sgaurav/understanding-es6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://github.com/jbranchaud/til#javascript&#34;&gt;https://github.com/jbranchaud/til#javascript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;books-series:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Books/Series&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://www.frontendhandbook.com/&#34;&gt;http://www.frontendhandbook.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;&gt;https://github.com/getify/You-Dont-Know-JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://rtablada.gitbooks.io/front-end-engineering-june-2015/content/&#34;&gt;https://rtablada.gitbooks.io/front-end-engineering-june-2015/content/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;videos-courses:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Videos/Courses&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://egghead.io/series/how-to-write-an-open-source-javascript-library&#34;&gt;https://egghead.io/series/how-to-write-an-open-source-javascript-library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ember-js:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Ember.js&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://vimeo.com/globalembermeetup/videos&#34;&gt;https://vimeo.com/globalembermeetup/videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;functional-programing-fp:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Functional Programing (FP)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://github.com/MostlyAdequate/mostly-adequate-guide&#34;&gt;https://github.com/MostlyAdequate/mostly-adequate-guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;electron:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Electron&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Choose &amp;amp; Expand list from &lt;a href=&#34;https://github.com/sindresorhus/awesome-electron&#34;&gt;https://github.com/sindresorhus/awesome-electron&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;erlang:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Erlang&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://ferd.ca/the-zen-of-erlang.html&#34;&gt;http://ferd.ca/the-zen-of-erlang.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;elixir-phoenix:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Elixir/Phoenix&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] Elixir in Action Blog &lt;a href=&#34;http://theerlangelist.com/&#34;&gt;http://theerlangelist.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] Elixir Crash course &lt;a href=&#34;http://elixir-lang.org/crash-course.html&#34;&gt;http://elixir-lang.org/crash-course.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://joearms.github.io/2013/05/31/a-week-with-elixir.html&#34;&gt;http://joearms.github.io/2013/05/31/a-week-with-elixir.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;git:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Git&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://www.learnenough.com/git-tutorial&#34;&gt;http://www.learnenough.com/git-tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;terminal:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Terminal&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://www.learnenough.com/command-line-tutorial&#34;&gt;http://www.learnenough.com/command-line-tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;vim:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Vim&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://www.learnenough.com/text-editor-tutorial&#34;&gt;http://www.learnenough.com/text-editor-tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;npm:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;NPM&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;https://github.com/npm-scripts/scripts&#34;&gt;https://github.com/npm-scripts/scripts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;linux:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Linux&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href=&#34;http://www.tldp.org/LDP/intro-linux/html/index.html&#34;&gt;http://www.tldp.org/LDP/intro-linux/html/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Today I Learned</title>
+      <link>http://kushdilip.github.io/blog/today-i-learned/</link>
+      <pubDate>Fri, 12 Feb 2016 00:01:30 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/today-i-learned/</guid>
+      <description>
+
+&lt;p&gt;Here is the list of stuff I discovered myself or found out after exploration over internet.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;ember:d107de37c91ec336ae1c46140be47410&#34;&gt;Ember&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/&#34;&gt;Ember addon install package old &amp;amp; new&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/&#34;&gt;Binding style attribute and safestring in Ember&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;git:d107de37c91ec336ae1c46140be47410&#34;&gt;Git&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/&#34;&gt;Syncing git repo fork with upstream&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;shell:d107de37c91ec336ae1c46140be47410&#34;&gt;Shell&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/&#34;&gt;Recursively rename file folder names&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;h2 id=&#34;other-lists:d107de37c91ec336ae1c46140be47410&#34;&gt;Other lists&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/things-i-want-to-learn/&#34;&gt;TIWTL - Things I want to Learn&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ember addon install package old &amp; new</title>
+      <link>http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/</link>
+      <pubDate>Thu, 11 Feb 2016 23:59:04 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/</guid>
+      <description>&lt;p&gt;Ember-cli provides &lt;code&gt;addAddonsToProject&lt;/code&gt; api method for addon developers to install other addons using blueprints. In older versions of ember-cli(perhaps &amp;lt; 1.13) &lt;code&gt;addAddonsToProject&lt;/code&gt; method doesn&amp;rsquo;t accepts array of packages but the new one does.&lt;/p&gt;
+
+&lt;p&gt;So here is the code to support your addon users who are using old or newer versions of ember-cli.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;my-addon/blueprints/my-addon/index.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;module.exports = {
+  description: &#39;Blueprint to install dependencies for your ember addon projects&#39;,
+  
+  normalizeEntityName: function() {}, // no-op since we&#39;re just adding dependencies
+  
+  afterInstall: function(options) {
+      // sample packages list
+      var packages = [
+        &#39;ember-cli-mirage&#39;,
+        &#39;ember-metrics&#39;
+      ];
+      
+      this.installPackages(packages);
+  ),
+  
+  //This is not provided by Ember-cli
+  installPackages: function(options, packages) {
+    if (typeof this.addAddonsToProject === &#39;function&#39;) { // newer versions of ember-cli
+      return this.addAddonsToProject({
+        packages: packages
+      });
+    }
+    
+    return packages.reduce(function (prev, pkg, index) {
+      if (index === 1) {
+        prev = this.addAddonToProject(prev);
+      }
+      return prev.then(this.addAddonToProject(pkg));
+    }.bind(this));
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Create Ember Blog App: Part 1</title>
+      <link>http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/</link>
+      <pubDate>Wed, 20 Jan 2016 09:48:44 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/</guid>
+      <description>
+
+&lt;p&gt;I have been using &lt;a href=&#34;http://emberjs.com/&#34;&gt;Ember.js&lt;/a&gt; for approximately 18 months now. A lot has changed since I started learning it. Now things rarely break. There are plenty of &lt;a href=&#34;http://emberobserver.com/&#34;&gt;addons&lt;/a&gt; for whatever exciting stuff you want to do.
+There are articles, tutorials, podcasts, conference videos and local ember meetups everywhere. Small startups to big companies are using Ember to builds awesome apps.&lt;/p&gt;
+
+&lt;p&gt;You will get Ember related content everywhere. I am not here to convince you why Ember is so awesome.
+I am assuming that you are already convinced that Ember is cool and you&amp;rsquo;d like to give it a try. So my goal with this series is just to get you started smoothly with Ember. Along with tutorials We will learn some interesting tricks as well.&lt;/p&gt;
+
+&lt;p&gt;In this series of posts, we will learn how to create a Ember.js based blog application with the help of &lt;a href=&#34;http://ember-cli.com/&#34;&gt;ember-cli&lt;/a&gt;. This app is also a playground for me to test cool new stuff coming with latest versions of Ember.js, &lt;a href=&#34;https://github.com/emberjs/data&#34;&gt;Ember-Data&lt;/a&gt; &amp;amp; Ember-cli.&lt;/p&gt;
+
+&lt;p&gt;We will be using &lt;a href=&#34;http://ember-cli.com/&#34;&gt;ember-cli&lt;/a&gt; a lot here which is a command line utitiy developed by the same people who created Ember.js. It provides asset pipeline and enforces strong conventional project structure for our ember apps. You can read more here &lt;a href=&#34;http://ember-cli.com/#overview&#34;&gt;http://ember-cli.com/#overview&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Let&amp;rsquo;s begin..&lt;/p&gt;
+
+&lt;h4 id=&#34;required-packages:3c464522e88d23110f8834d59977bcf3&#34;&gt;Required packages.&lt;/h4&gt;
+
+&lt;p&gt;First Ensure that below tools and packages are available on your system&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/download/&#34;&gt;Node.js&lt;/a&gt; (&amp;gt;= 0.12) &amp;amp; NPM&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bower.io/#install-bower&#34;&gt;Bower&lt;/a&gt; : install using &lt;code&gt;npm install -g bower&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ember-cli.com/&#34;&gt;ember-cli&lt;/a&gt; - install using &lt;code&gt;npm install -g ember-cli&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Follow &lt;a href=&#34;http://www.ember-cli.com/#getting-started&#34;&gt;http://www.ember-cli.com/#getting-started&lt;/a&gt; to install other dependencies.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-first-step-create-app:3c464522e88d23110f8834d59977bcf3&#34;&gt;1. First step: Create app&lt;/h3&gt;
+
+&lt;p&gt;Move to a directory where you want to create ember app and run below command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ember new ember-blog-example&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This commoand will scaffold the whole app with all necessary files and folders for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-app-directory.png&#34; alt=&#34;Ember app directory&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Now cd into directory &lt;code&gt;ember-blog-example&lt;/code&gt; and type &lt;strong&gt;&lt;code&gt;ember server&lt;/code&gt;&lt;/strong&gt;, which will take few seconds to build and start the server. Server is provided by ember-cli for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-server.png&#34; alt=&#34;Ember server&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Open your broswer on and hit &lt;code&gt;localhost:4200&lt;/code&gt; to see live app. It has some welcome content.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-setting-up-router-routes:3c464522e88d23110f8834d59977bcf3&#34;&gt;2. Setting up Router &amp;amp; Routes&lt;/h3&gt;
+
+&lt;p&gt;Ember app related all the files are present in &lt;code&gt;app&lt;/code&gt; directory. Everything else is just to make your life easier as a developer.
+At the root of &lt;code&gt;app&lt;/code&gt; directory you will find a file called &lt;code&gt;router.js&lt;/code&gt;. It extends &lt;code&gt;Ember.Router&lt;/code&gt; and without even writing a single line of code, it provides you two routes.
+First &lt;code&gt;application&lt;/code&gt; aka &lt;code&gt;root&lt;/code&gt; aka &lt;code&gt;/&lt;/code&gt;. And one child route of root called &lt;code&gt;index&lt;/code&gt;. These are automatically created for you during build process and put in final builds files.
+I will recommend installing a chrome plugin called &lt;a href=&#34;https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi?hl=en&#34;&gt;Ember Inspector&lt;/a&gt; to explore the structure of the app as we develop.&lt;/p&gt;
+
+&lt;p&gt;We need to create route endpoints for all the different pages you want in your app. Here we need two main routes.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;posts&lt;/strong&gt;  - here you can see the list of post in your blog app.
+To generate &lt;code&gt;posts&lt;/code&gt; route, run &lt;strong&gt;&lt;code&gt;ember generate resource posts&lt;/code&gt;&lt;/strong&gt; in terminal.
+It adds adds endpoint in &lt;code&gt;routers.js&lt;/code&gt;, route file &lt;code&gt;app/routes/posts.js&lt;/code&gt;, model file
+&lt;code&gt;app/models/post.js&lt;/code&gt;, template &lt;code&gt;app/templates/posts.hbs&lt;/code&gt; and few test files.
+Don&amp;rsquo;t bother about so many files we&amp;rsquo;ll come to these later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;post&lt;/strong&gt;   - It&amp;rsquo;s a dynamic route which shows you the data for each individual app.
+Generate &lt;strong&gt;post&lt;/strong&gt; route by running &lt;strong&gt;&lt;code&gt;ember generate route posts/post&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now &lt;code&gt;router.js&lt;/code&gt; looks like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import Ember from &#39;ember&#39;;
+import config from &#39;./config/environment&#39;;
+
+const Router = Ember.Router.extend({
+  location: config.locationType
+});
+
+Router.map(function() {
+  this.route(&#39;posts&#39;, { path: &#39;/posts&#39;}, function() {
+    this.route(&#39;post&#39;, { path: &#39;/:id&#39;});
+  });
+});
+
+export default Router;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Here &lt;strong&gt;&lt;code&gt;posts&lt;/code&gt;&lt;/strong&gt; is a spceial type of route called resource and can have multiple child routes.  If &lt;code&gt;path&lt;/code&gt; is not provided then fist paramter is taken as path by default.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;post&lt;/code&gt;&lt;/strong&gt; is just a dynamic child route, where the actual path is &lt;code&gt;id&lt;/code&gt; of each post.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So if you want to see all the posts, navigate to &lt;strong&gt;&lt;code&gt;localhost:4200/posts&lt;/code&gt;&lt;/strong&gt;.
+For a post with id 1, navigate to &lt;strong&gt;&lt;code&gt;localhost:4200/posts/1&lt;/code&gt;&lt;/strong&gt;. See, so simple. We&amp;rsquo;ll get data soon(there is no data right now).&lt;/p&gt;
+
+&lt;h3 id=&#34;3-show-some-data:3c464522e88d23110f8834d59977bcf3&#34;&gt;3. Show some data&lt;/h3&gt;
+
+&lt;p&gt;We don&amp;rsquo;t have any APIs right now so we will hardcode some data in the model hook of &lt;code&gt;routes/posts.js&lt;/code&gt;(automatically created after by commands run in previous step).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Route&lt;/strong&gt; is a class to define the individual resource/routes. There are many hooks predefined in Route class, out of which &lt;code&gt;model&lt;/code&gt; hooks is most important one which you need to override to get some data for our app.&lt;/p&gt;
+
+&lt;p&gt;Our final &lt;code&gt;app/routes/posts.js&lt;/code&gt; file will look like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import Ember from &#39;ember&#39;;
+
+export default Ember.Route.extend({
+  model: function (params, transition) {
+    return [
+      {id: 1, title: &#39;Welcome to my blog&#39;, content: &#39;hello everyone, welcome to my blog&#39;},
+      {id: 2, title: &#39;A trip to remmeber&#39;, content: &#39;We went to a beautiful place this summer&#39;}
+    ];
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we will modify the &lt;code&gt;app/templates/posts.hbs&lt;/code&gt; to render this data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;h2&amp;gt;Ember Blog Expample&amp;lt;/h2&amp;gt;
+&amp;lt;hr&amp;gt;
+&amp;lt;h3&amp;gt;Posts&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  {{#each content as |post|}}
+    &amp;lt;li&amp;gt;
+      &amp;lt;strong&amp;gt;{{post.title}}&amp;lt;/strong&amp;gt;
+    &amp;lt;/li&amp;gt;
+  {{/each}}
+&amp;lt;/ul&amp;gt;
+&amp;lt;hr&amp;gt;
+{{outlet}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;{{outlet}}&lt;/code&gt; is portion where template for child routes gets rendered.&lt;/p&gt;
+
+&lt;p&gt;Ember has &lt;strong&gt;Controller&lt;/strong&gt; class which provides data to the templates.  If you don&amp;rsquo;t create corresponding controller for each route then a default one automatically created.
+The data is automatically set by route to &lt;code&gt;model&lt;/code&gt; property of, but we are using &lt;code&gt;content&lt;/code&gt; here, which is just an alias for &lt;code&gt;model&lt;/code&gt;. It&amp;rsquo;s a just a matter of personal preference to use either.&lt;/p&gt;
+
+&lt;p&gt;Now open &lt;strong&gt;&lt;code&gt;localhost:4200/posts&lt;/code&gt;&lt;/strong&gt; to see the list of posts.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-auto-redirect-to-posts-route:3c464522e88d23110f8834d59977bcf3&#34;&gt;4. Auto redirect to &lt;code&gt;posts&lt;/code&gt; route&lt;/h3&gt;
+
+&lt;p&gt;First create a file &lt;code&gt;index.js&lt;/code&gt; in &lt;code&gt;app/routes&lt;/code&gt; directory. Then modify &lt;code&gt;app/routes/index.js&lt;/code&gt; file to automatically redirect the browser from &lt;code&gt;/&lt;/code&gt; to &lt;code&gt;/posts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;app/routes/index.js&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import Ember from &#39;ember&#39;;
+export default Ember.Route.extend({
+  redirect() {
+    this.transitionTo(&#39;posts&#39;);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-transition-to-post-route:3c464522e88d23110f8834d59977bcf3&#34;&gt;5. Transition to post route&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s modify &lt;code&gt;posts.hbs&lt;/code&gt; now. Instead of just showing the post title we will use &lt;code&gt;link-to&lt;/code&gt; helper provided by ember. It will create links for individual post page.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;strong&amp;gt;{{#link-to &#39;posts.post&#39; post}}{{post.title}}{{/link-to}}&amp;lt;/strong&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the first paramter to &lt;code&gt;link-to&lt;/code&gt; is full path to the route from &lt;code&gt;router.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now if you click on any link, the url will change to &lt;strong&gt;&lt;code&gt;localhost:4200/posts/{{whatever_id}}&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;6-show-post-data:3c464522e88d23110f8834d59977bcf3&#34;&gt;6. Show post data&lt;/h3&gt;
+
+&lt;p&gt;Modify &lt;code&gt;app/routes/posts/post.hbs&lt;/code&gt; to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;h3&amp;gt;{{content.title}}&amp;lt;/h3&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;p&amp;gt;{{content.content}}&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7-fixing-the-refresh:3c464522e88d23110f8834d59977bcf3&#34;&gt;7. Fixing the refresh&lt;/h3&gt;
+
+&lt;p&gt;If you go to &lt;strong&gt;&lt;code&gt;localhost:4200&lt;/code&gt;&lt;/strong&gt; , it redirects to &lt;code&gt;/posts&lt;/code&gt;. You get a list of post titles with link to dynamic route. Clicking on these links shows you contents of each post. We are passing the whole post object in these &lt;code&gt;link-to&lt;/code&gt;.
+Clicking on any post works fine. But if you&amp;rsquo;re already on some post and try to do page refresh. See! the data is lost. What do we do now?
+There is a solution for that as well. We will get our data from posts route directly.&lt;/p&gt;
+
+&lt;p&gt;Before solving this issue I will try to explain some important concepts.
+The Ember.Route provides us a model hook which we are already using for posts route. but in post route we are not overriding any such model hook. So how does it get post data automatically.
+Route class has one more hook called &lt;code&gt;setupController&lt;/code&gt;. the default implementation  provided by Ember is as below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;setupController(controller, context, transition) {
+    if (controller &amp;amp;&amp;amp; (context !== undefined)) {
+      set(controller, &#39;model&#39;, context);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this hook is called automatically after model hook returns data and sets it to a &lt;code&gt;model&lt;/code&gt; property of of corresponding controller.&lt;/p&gt;
+
+&lt;p&gt;if you want to override this hook without any modifcation, it will look like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;setupController(controller, model){
+  this._super(...arguments);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We learnt about three of route hooks. &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;setupController&lt;/code&gt; and &lt;code&gt;redirect&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now the interesting thing to know here is that everytime you land on some page, the model hook will not be called always but setupcontroller will be always called first.
+There are two ways to reach any page on our blog app. First is if you were already on some other page say posts and click on the any post link. Technically speaking our Ember app was already instantiated. and you merely navigated to other route.&lt;/p&gt;
+
+&lt;p&gt;In our case the code looks like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;{{#link-to &#39;posts.post&#39; post}}{{post.title}}{{/link-to}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you see the corresponding route in router.js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;this.route(&#39;post&#39;, { path: &#39;/:id&#39;});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which expects an id (a number or string). But in our link-to we are passing the whole object.
+In this case, Ember knows that you already have data and tries to match dynamic url parameter &lt;code&gt;:id&lt;/code&gt; to &lt;code&gt;id&lt;/code&gt; from post object. Because of this assumption it skips the model hook and directly calls the &lt;code&gt;setupController&lt;/code&gt; on post route.&lt;/p&gt;
+
+&lt;p&gt;Other way to reach at post route is directly through url or refreshing on any post.
+So let&amp;rsquo;s say we refresh on route &lt;code&gt;localhost:4200/posts/1&lt;/code&gt;. We will hit &lt;code&gt;model&lt;/code&gt; hook first which is not implemented yet so &lt;code&gt;setupController&lt;/code&gt; will be called with null data.&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s solve this problem by implementing model hook. Add below lines to your post route&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;app/routes/posts/post.js&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;model(params, transition){
+	let posts = this.modelFor(&#39;posts&#39;);
+	let id = +params.id;
+    let [post] = posts.filterBy(&#39;id&#39;, id);
+	return post;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you will be able to see data on refreshing &lt;strong&gt;&lt;code&gt;localhost:4200/posts/1&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also try out putting just id in link-to
+&lt;code&gt;{{#link-to &#39;posts.post&#39; post.id}}{{post.title}}{{/link-to}}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the model hook of post route will hit first, no matter how you reach this page.&lt;/p&gt;
+
+&lt;p&gt;Screenshots from the app I am running locally&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-blog-posts.png&#34; alt=&#34;Screenshot 1&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-blog-posts-2.png&#34; alt=&#34;Screenshot 2&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this part we learn about very basics of Ember router, routes, controllers and
+some interesting things which people come across after months of using Ember.js&lt;/p&gt;
+
+&lt;h4 id=&#34;source-code:3c464522e88d23110f8834d59977bcf3&#34;&gt;Source code&lt;/h4&gt;
+
+&lt;p&gt;As we go through this tutorial I will keep pushing code on this &lt;a href=&#34;https://github.com/kushdilip/ember-blog-example&#34;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I will also create version tags after each part of this series.
+First version is available here &lt;a href=&#34;https://github.com/kushdilip/ember-blog-example/releases/tag/0.1.0&#34;&gt;v0.1.0&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>http://kushdilip.github.io/blog/page/quotes/</link>
+      <pubDate>Sun, 20 Dec 2015 13:23:03 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/page/quotes/</guid>
+      <description>&lt;p&gt;We frequently come across brilliant quotes in books or on internet. These quotes inspires us for that moment and we start thinking that this can change our whole life. But after sometime we totally forget about it.
+So here I am putting up a compiled list of quotes which inspire me to bring the change in myself.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;#paying_attention&#34;&gt;Paying attention to ourselves&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Afraid of being alone, we struggle to pay attention to ourselves. And what suffers is our ability to pay attention to each other. If we can’t find our own center, we lose confidence in what we have to offer others.&lt;/p&gt;
+
+&lt;p&gt;Or you can work the circle the other way. We struggle to pay attention to each other, and what suffers is our ability to know ourselves.”&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash; CS Lewis&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.artofmanliness.com/2015/11/02/the-power-of-conversation-a-lesson-from-cs-lewis-and-jrr-tolkien/&#34;&gt;Article link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;#personal_renewal&#34;&gt;Personal Renewal&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Life is the art of drawing without an eraser.&lt;/li&gt;
+&lt;li&gt;You never conquer the mountain, You only conquer yourself.&lt;/li&gt;
+&lt;li&gt;There are some things you can&amp;rsquo;t learn from others. You have to pass through the fire.&lt;/li&gt;
+&lt;li&gt;At the end of every road you meet yourself.&lt;/li&gt;
+&lt;li&gt;Old or young, we&amp;rsquo;re on our last cruise.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.pbs.org/johngardner/sections/writings_speech_1.html&#34;&gt;Article link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>inspirations</title>
+      <link>http://kushdilip.github.io/blog/page/inspirations/</link>
+      <pubDate>Fri, 18 Dec 2015 18:07:50 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/page/inspirations/</guid>
+      <description>
+
+&lt;h2 id=&#34;tech:e193aaaacd82f155352381b2c55884a9&#34;&gt;Tech&lt;/h2&gt;
+
+&lt;h4 id=&#34;all-things-web:e193aaaacd82f155352381b2c55884a9&#34;&gt;All things Web&lt;/h4&gt;
+
+&lt;p&gt;Addy Osmani - &lt;a href=&#34;https://addyosmani.com/&#34;&gt;https://addyosmani.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;author-of-css-secrets:e193aaaacd82f155352381b2c55884a9&#34;&gt;Author of CSS Secrets&lt;/h4&gt;
+
+&lt;p&gt;Lea Verou  &lt;a href=&#34;http://lea.verou.me/&#34;&gt;http://lea.verou.me/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;tech-life:e193aaaacd82f155352381b2c55884a9&#34;&gt;Tech &amp;amp; Life&lt;/h4&gt;
+
+&lt;p&gt;DOMENICA &lt;a href=&#34;http://blog.disegnasacchetta.net/&#34;&gt;http://blog.disegnasacchetta.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;nodejs-god:e193aaaacd82f155352381b2c55884a9&#34;&gt;Nodejs GOD&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus&#34;&gt;https://github.com/sindresorhus&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;tech-general:e193aaaacd82f155352381b2c55884a9&#34;&gt;Tech &amp;amp; General&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Divya Manian &lt;a href=&#34;http://nimbupani.com/&#34;&gt;http://nimbupani.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;general:e193aaaacd82f155352381b2c55884a9&#34;&gt;General&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://chadfowler.com&#34;&gt;http://chadfowler.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;List is not complete yet ..&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Technical debt resources</title>
+      <link>http://kushdilip.github.io/blog/technical-debt-resources/</link>
+      <pubDate>Thu, 17 Dec 2015 00:24:32 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/technical-debt-resources/</guid>
+      <description>
+
+&lt;p&gt;You might have heard of the term Technical Debt at some point of time in your programming career. It is defined as making short term compromise in designing software systems and writing code to gain which makes it difficult to maintain the code &amp;amp; software in the future.&lt;/p&gt;
+
+&lt;p&gt;Recently I was reading a lot of material on software design, architecture. And this term suddenly caught my eye. So I kept on going further to understand how do we create technical debt and what are the stepwise solutions to fix or altogether avoid it.&lt;/p&gt;
+
+&lt;p&gt;Here I am sharing all the links and articles I went through or I will go through on this topic. I have categories the articles into separate sections so as keep the flow.&lt;/p&gt;
+
+&lt;h4 id=&#34;understanding:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Understanding&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/08/07/technical-debt-1/&#34;&gt;https://18f.gsa.gov/2015/08/07/technical-debt-1/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/09/04/what-is-technical-debt/&#34;&gt;https://18f.gsa.gov/2015/09/04/what-is-technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://notmessenger.com/technical-debt/&#34;&gt;http://notmessenger.com/technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;identifying:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Identifying&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/10/05/managing-technical-debt/&#34;&gt;https://18f.gsa.gov/2015/10/05/managing-technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;solution:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/10/22/preventing-technical-debt/&#34;&gt;https://18f.gsa.gov/2015/10/22/preventing-technical-debt/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://18f.gsa.gov/2015/11/17/choose-design-over-architecture/&#34;&gt;https://18f.gsa.gov/2015/11/17/choose-design-over-architecture/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;consequences:cd1e9e00cfaaf0b8531af77047633f28&#34;&gt;Consequences&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.industriallogic.com/blog/technical-debt-considered/&#34;&gt;https://www.industriallogic.com/blog/technical-debt-considered/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://brucefwebster.com/2008/04/11/the-wetware-crisis-the-dead-sea-effect/&#34;&gt;http://brucefwebster.com/2008/04/11/the-wetware-crisis-the-dead-sea-effect/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It looks quite scary after reading all the above articles but if there is a problem then there is always a solution. So avoiding short term compromizes and following better design patterns can free the people working on any product from huge technical debts.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use different versions of Node.js using NVM</title>
+      <link>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</link>
+      <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</guid>
+      <description>
+
+&lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;
+
+&lt;h4 id=&#34;method-1:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Method 1.&lt;/h4&gt;
+
+&lt;p&gt;For the first method use below command on your terminal to install latest version of Node.js on your ubuntu system&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add cris-lea node ppa repository
+&lt;code&gt;sudo add-apt-repository ppa:chris-lea/node.js&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Update your pacakge manager
+&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install nodejs
+&lt;code&gt;sudo apt-get install nodejs&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check the version of nodejs using &lt;code&gt;node -v&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;method-2:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Method 2.&lt;/h4&gt;
+
+&lt;p&gt;This is a smarter method and gives you more control over &lt;strong&gt;Node.js&lt;/strong&gt; versions.
+&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;NVM&lt;/a&gt; is Node Version Manager which installs and manages different versions of Node.js on your system.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For installing nvm, you need few dependency packages first. You many already have them, if not then you can install them using below command.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install build-essential libssl-dev curl&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download the nvm installation script from nvm &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;GitHub page&lt;/a&gt;. The version number may be different, but normally, you can download and install it using following command:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Above command might fail if you&amp;rsquo;re not a root user. For linux mint the script tries to install in directory &lt;code&gt;/etc/mdm/&lt;/code&gt;. So, You need to change the owner of &lt;code&gt;/etc/mdm/&lt;/code&gt; directory if you are using Linux Mint. Use below command for this situations. Assuming you are logged in as  &lt;code&gt;xyzuser&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;sudo chown -R xyzuser /etc/mdm&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To gain access to the nvm features, you&amp;rsquo;ll need to log out and log in back, or you can source the ~/.profile file so that your current session knows about the changes:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;source ~/.profile&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;few-useful-nvm-commands:77b62ca32020268d71a72eacb9ab1f15&#34;&gt;Few useful NVM commands&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find out available Node.js versions.&lt;br/&gt;
+&lt;code&gt;nvm ls-remote&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install a particular version of Node.js&lt;br/&gt;
+&lt;code&gt;nvm install 0.11.33&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use a particular version of Node.js&lt;br/&gt;
+&lt;code&gt;nvm use 0.11.13&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List version of Node.js available on your machine&lt;br/&gt;
+&lt;code&gt;nvm ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set a particular version as default.&lt;br/&gt;
+&lt;code&gt;nvm alias default 0.11.13&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is one caveat. NVM installs Node.js in your home directory and other users can&amp;rsquo;t access it, so you should always have one of stable version of node.js installed using &lt;strong&gt;Method 1&lt;/strong&gt; mentioned above.&lt;/p&gt;
+
+&lt;p&gt;Why so much emphasis on using nvm, because you might be working on different Node.js projects which may work on a particular version and break on others. So using NVM saves a lot of effort.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For more info visit the &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;NVM Github Repository&lt;/a&gt;. For any issue please comment below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rollback Ember-Data Model changes completely</title>
+      <link>http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/</link>
+      <pubDate>Wed, 05 Nov 2014 00:48:54 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/</guid>
+      <description>&lt;p&gt;Ember-Data models have a property called &lt;code&gt;isDirty&lt;/code&gt;. Whenever you make some changes to local model and it&amp;rsquo;s not yet saved to server, &lt;code&gt;isDirty&lt;/code&gt; property will be true.
+Generally our models have various &lt;code&gt;belongsTo&lt;/code&gt; and &lt;code&gt;hasMany&lt;/code&gt; relationships. So if some child of model gets dirty, then doing &lt;code&gt;model.rollback()&lt;/code&gt; doesn&amp;rsquo;t rollbacks changes on child ember objects.&lt;/p&gt;
+
+&lt;p&gt;Here I&amp;rsquo;m going to explain how to handle similar situation.&lt;/p&gt;
+
+&lt;p&gt;Suppose you have Ember-Data Models called &lt;code&gt;House&lt;/code&gt; and &lt;code&gt;Address&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;app/models/house.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var House = DS.Model.extend({
+	id: DS.attr(&amp;quot;string&amp;quot;),
+	member_count: DS.attr(&amp;quot;number&amp;quot;),
+	address: DS.belongsTo(&amp;quot;Address&amp;quot;)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;app/models/address.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var Address = DS.Model.extend({
+	house_no: DS.attr(&amp;quot;number&amp;quot;)
+	Street: DS.attr(&amp;quot;string&amp;quot;)
+	city: DS.attr(&amp;quot;string&amp;quot;)
+	state: DS.attr(&amp;quot;string&amp;quot;)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&amp;rsquo;s assume I fetched &lt;code&gt;house&lt;/code&gt; object from server. In my client application if change &lt;code&gt;member_count&lt;/code&gt; to some value say 5.
+&lt;code&gt;house.set(&amp;quot;member_count&amp;quot;, 5)&lt;/code&gt;
+Now &lt;code&gt;house.get(&amp;quot;isDirty&amp;quot;)&lt;/code&gt; will be true and upon executing &lt;code&gt;house.rollback()&lt;/code&gt; will reset the value to original. but if I change something in address object, say &lt;code&gt;house.get(&#39;address&#39;).set(&#39;house_no&#39;, 10)&lt;/code&gt;. Now &lt;code&gt;house&lt;/code&gt; is still clean although it&amp;rsquo;s child &lt;code&gt;address&lt;/code&gt; is now dirty.&lt;/p&gt;
+
+&lt;p&gt;You can use below code to rollback the entire house as well as it&amp;rsquo;s childs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var deepRollback = function(model) {
+    var that;
+    that = this;
+    if (model.get(&amp;quot;isDirty&amp;quot;)) {
+      model.rollback();
+    }
+    return model.eachRelationship(function(key, relationship) {
+      if (relationship.kind === &amp;quot;belongsTo&amp;quot;) {
+        return that.deepRollback(model.get(key));
+      }
+    });
+  }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now executing &lt;code&gt;deepRollback(house)&lt;/code&gt; will rollback house and all it&amp;rsquo;s &lt;code&gt;belongsTo&lt;/code&gt; objects.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Build Hybrid Mobile App with Ionic Framework and Yeoman</title>
+      <link>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
+      <pubDate>Sun, 28 Sep 2014 17:42:01 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
+      <description>
+
+&lt;p&gt;The hybrid app technolgoies have revolutioned the development of cross platform mobile applications.
+There are various free and licenced platform in market for building beautiful cross platform apps e.g. &lt;a href=&#34;http://phonegap.com/&#34;&gt;Phonegap&lt;/a&gt;, &lt;a href=&#34;http://www.appcelerator.com/titanium/&#34;&gt;Titanium&lt;/a&gt;, &lt;a href=&#34;http://www.sencha.com/products/touch&#34;&gt;Sencha Touch&lt;/a&gt; and &lt;a href=&#34;https://crosswalk-project.org/&#34;&gt;CrossWalk&lt;/a&gt;.
+Most popular one is &lt;strong&gt;Phonegap&lt;/strong&gt;. It uses Webkit rendering engine.While &lt;strong&gt;Crosswalk&lt;/strong&gt; is similar but developed by Intel and supports latest Blink rendering engine used in latest chrome browsers.&lt;/p&gt;
+
+&lt;p&gt;There is a new Platform in market called &lt;a href=&#34;http://ionicframework.com/&#34;&gt;Ionic Framework&lt;/a&gt;. It is free and Open source. Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps. There is a vibrant community behind Ionic. It utilizes &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;, which is one of the most popular frontend javascript framework. Though it internally used phonegap to build and package the apps for Android and iOS platforms&lt;/p&gt;
+
+&lt;p&gt;There are a lot of Resources on Ionic Website. Here I am going to explain how to build your first Ionic cross platform app using &lt;a href=&#34;http://ionicframework.com/&#34;&gt;Ionic&lt;/a&gt; and &lt;a href=&#34;http://yeoman.io/&#34;&gt;Yeoman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yeoman.io&#34;&gt;Yeoman&lt;/a&gt; is scaffolding tool, which has lots of generators available and scaffolds full project structure with necessary libraries for you. Today most of the web developers use Yeoman aka Yo for web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;&lt;em&gt;So Let&amp;rsquo;s Start&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;1-install-and-setup-node-js-and-npm:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;1. Install and Setup &lt;code&gt;Node.js&lt;/code&gt; and &lt;code&gt;npm&lt;/code&gt;.&lt;/h4&gt;
+
+&lt;p&gt;Even though there are thousands of tutorials available for Installing Node.js, I&amp;rsquo;ll explain here easiest method for Ubuntu 14.04 and Mint 17.
+If you have Node installed already then skip to next step.&lt;/p&gt;
+
+&lt;p&gt;Run below commands in terminal, which will also install &lt;code&gt;npm&lt;/code&gt; package manager.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  $ sudo add-apt-repository ppa:chris-lea/node.js
+  $ sudo apt-get update
+  $ sudo apt-get install nodejs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-install-ionic-framework-cordova-and-other-npm-packages:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;2. Install Ionic Framework, cordova and other npm packages&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run below command to install &lt;code&gt;cordova&lt;/code&gt; and &lt;code&gt;ionic&lt;/code&gt; globally using &lt;code&gt;npm&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g cordova ionic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;ll need few other package for build process later on, which can also be installed using npm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g grunt bower yeoman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;ll also need &lt;a href=&#34;http://yeoman.io/generators/&#34;&gt;yeoman generator&lt;/a&gt; for Ionic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g generator-ionic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-create-and-build-ionic-project:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;3. Create and build Ionic project&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create directory named &lt;code&gt;my-ionic-project&lt;/code&gt; and navigate to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd my-ionic-project &amp;amp;&amp;amp; cd $_
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now run ionic generator using &lt;code&gt;yo&lt;/code&gt; cammand&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ yo ionic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These will present you and interactive terminal. Answer &lt;code&gt;No&lt;/code&gt; for &lt;code&gt;Saas&lt;/code&gt;, you won&amp;rsquo;t need it now. Don&amp;rsquo;t add other plugins packages for now. It will also ask for Starter Template, Choose 3rd option Side Menu.&lt;/p&gt;
+
+&lt;p&gt;All of these looks like below&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ yo ionic
+    _             _
+   (_)           (_)
+    _  ___  _ __  _  ___
+   | |/ _ \| &#39;_ \| |/ __|
+   | | (_) | | | | | (__
+   |_|\___/|_| |_|_|\___|
+
+[?] Would you like to use Sass with Compass (requires Ruby)? No
+Created a new Cordova project with name &amp;quot;Temp&amp;quot; and id &amp;quot;com.example.Temp&amp;quot;
+[?] Which Cordova plugins would you like to include? org.apache.cordova.console, org.apache.cordova.device
+[?] Which starter template [T] or example app [A] would you like to use? [T] Side Menu
+...
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It will generate a folder structure for you similar to this&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/my-ionic-project_zps677308c0.png&#34; alt=&#34;my-ionic-project&#34; &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-testing-application-on-browser:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;3. Testing Application on browser.&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run below command from your project directory to run the web application server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ grunt serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You can test the application on &lt;code&gt;http://localhost:9000&lt;/code&gt; in any browser.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you want to change the port, you can do so from &lt;code&gt;Gruntfile.js&lt;/code&gt; in root of your project.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;if you are connected to local network or wifi, then change &lt;code&gt;hostname&lt;/code&gt; value in &lt;code&gt;Gruntfile.js&lt;/code&gt; to &lt;code&gt;0.0.0.0&lt;/code&gt; and now find out your machine ip using ifconfig. e.g. if it is &lt;code&gt;192.168.2.4&lt;/code&gt; then you can the app from any device in the same network by pointing their browser to &lt;code&gt;http://192.168.2.4:9000&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-running-on-android-device:7bc56bf8644c62fbd9067967eb79e937&#34;&gt;4. Running on Android Device&lt;/h4&gt;
+
+&lt;p&gt;To run your first ionic application on actual mobile platform like android, follow below steps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add and build cordova platform for Android in project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cordova platform add android
+$ grunt cordova
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now pick &lt;strong&gt;MyIonicProject-debug-unaligned.apk&lt;/strong&gt; from &lt;code&gt;my-ionic-project/platforms/android/ant-build/&lt;/code&gt; and move it to your device by connecting via USB or dropbox or Google Drive or anything else you like. And then install it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Follow the tutorial and let me know through comments if you face any problem.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Install Conky in Linux Mint / Ubuntu</title>
+      <link>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</link>
+      <pubDate>Sun, 31 Aug 2014 21:45:36 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://conky.sourceforge.net/&#34;&gt;Conky&lt;/a&gt; is a free, light-weight system monitor for X, that displays various system information on your desktop. Using conky you can add diffrent kind of cool widgets to your Desktop. These widget can be used to monitor various system activities, ram &amp;amp; cpu usage or simply to show Date &amp;amp; Time.&lt;/p&gt;
+
+&lt;p&gt;In this post I will explain how you can install &lt;strong&gt;Conky&lt;/strong&gt; in Linux Mint and Ubuntu.&lt;/p&gt;
+
+&lt;h4 id=&#34;conky-installation:4c1a56dd2db69fbaf5fc91fac05fb8f2&#34;&gt;Conky Installation&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install &lt;code&gt;conky&lt;/code&gt; and &lt;code&gt;conky-all&lt;/code&gt; using terminal or synaptic. Type below command in terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install conky &amp;amp;&amp;amp; conky-all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;conky-all&lt;/code&gt;, you can install &lt;code&gt;conky-std&lt;/code&gt;. But it&amp;rsquo;s better to go with &lt;code&gt;conky-all&lt;/code&gt; because it gives you all available features.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After installing run it using by typing &lt;code&gt;conky&lt;/code&gt; in terminal
+&lt;code&gt;
+$ conky
+&lt;/code&gt;
+It&amp;rsquo;s better to add conky to startup appliations. Here is how default conky looks in Mint.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31152119_zpsc880a021.png&#34; alt=&#34;conky-default&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The default conky widgets look very boring. You should definitely install &lt;code&gt;conky-manager&lt;/code&gt; to configure, add more themes and widgets to conky. Use below commands to install conky-manager.
+&lt;code&gt;
+$ sudo add-apt-repository ppa:teejee2008/ppa
+$ sudo apt-get update
+$ sudo apt-get install conky-manager
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the screenshots of conky-manager. You can see preinstalled widgets, themes. You can also see previews below the lists.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31213903_zps8c819e42.png&#34; alt=&#34;conky-manager-widgets&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31213909_zps72df3158.png&#34; alt=&#34;conky-managet-themes&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I have chosen &lt;strong&gt;Green Apple Desktop&lt;/strong&gt; theme. Here is how it looks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i1370.photobucket.com/albums/ag256/kushdilip/Screenshotfrom2014-08-31212031_zps01f2e4bf.png&#34; alt=&#34;conky-green-apple&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, you can download more themes and widgets from internet and experiment with conky to make it more cool.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://kushdilip.github.io/blog/page/privacy-policy/</link>
+      <pubDate>Thu, 31 Jul 2014 23:54:05 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog/page/privacy-policy/</guid>
+      <description>&lt;p&gt;Privacy Policy:&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
