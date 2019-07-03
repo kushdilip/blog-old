@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/</link>
+    <description>Recent content on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Feb 2016 19:28:38 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recursively rename file folder names</title>
+      <link>http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/</link>
+      <pubDate>Mon, 22 Feb 2016 19:28:38 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syncing git repo fork with upstream</title>
+      <link>http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/</link>
+      <pubDate>Sat, 13 Feb 2016 22:38:57 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/</guid>
+      <description>&lt;p&gt;Sometimes we fork git repositories and use the forked repo in our projects. But these fork repos get outdated as the upstream repo maintainers keep pushing commits.
+Here I will give you few commands to sync the forked repos with upstream repository.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Binding style attribute and safestring in Ember</title>
+      <link>http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/</link>
+      <pubDate>Sat, 13 Feb 2016 19:53:42 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/</guid>
+      <description>&lt;p&gt;Many times we want to have custom styles in our ember templates which are controlled via controller/components.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Things I want to Learn/Read/Watch</title>
+      <link>http://kushdilip.github.io/blog-old/things-i-want-to-learn/</link>
+      <pubDate>Fri, 12 Feb 2016 00:32:07 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/things-i-want-to-learn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Today I Learned</title>
+      <link>http://kushdilip.github.io/blog-old/today-i-learned/</link>
+      <pubDate>Fri, 12 Feb 2016 00:01:30 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/today-i-learned/</guid>
+      <description>&lt;p&gt;Here is the list of stuff I discovered myself or found out after exploration over internet.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ember addon install package old &amp; new</title>
+      <link>http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/</link>
+      <pubDate>Thu, 11 Feb 2016 23:59:04 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/</guid>
+      <description>&lt;p&gt;Ember-cli provides &lt;code&gt;addAddonsToProject&lt;/code&gt; api method for addon developers to install other addons using blueprints. In older versions of ember-cli(perhaps &amp;lt; 1.13) &lt;code&gt;addAddonsToProject&lt;/code&gt; method doesn&amp;rsquo;t accepts array of packages but the new one does.&lt;/p&gt;
+
+&lt;p&gt;So here is the code to support your addon users who are using old or newer versions of ember-cli.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Create Ember Blog App: Part 1</title>
+      <link>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</link>
+      <pubDate>Wed, 20 Jan 2016 09:48:44 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</guid>
+      <description>&lt;p&gt;I have been using &lt;a href=&#34;http://emberjs.com/&#34;&gt;Ember.js&lt;/a&gt; for approximately 18 months now. A lot has changed since I started learning it. Now things rarely break. There are plenty of &lt;a href=&#34;http://emberobserver.com/&#34;&gt;addons&lt;/a&gt; for whatever exciting stuff you want to do.
+There are articles, tutorials, podcasts, conference videos and local ember meetups everywhere. Small startups to big companies are using Ember to builds awesome apps.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>http://kushdilip.github.io/blog-old/page/quotes/</link>
+      <pubDate>Sun, 20 Dec 2015 13:23:03 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/quotes/</guid>
+      <description>&lt;p&gt;We frequently come across brilliant quotes in books or on internet. These quotes inspires us for that moment and we start thinking that this can change our whole life. But after sometime we totally forget about it.
+So here I am putting up a compiled list of quotes which inspire me to bring the change in myself.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>inspirations</title>
+      <link>http://kushdilip.github.io/blog-old/page/inspirations/</link>
+      <pubDate>Fri, 18 Dec 2015 18:07:50 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/inspirations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technical debt resources</title>
+      <link>http://kushdilip.github.io/blog-old/technical-debt-resources/</link>
+      <pubDate>Thu, 17 Dec 2015 00:24:32 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/technical-debt-resources/</guid>
+      <description>&lt;p&gt;You might have heard of the term Technical Debt at some point of time in your programming career. It is defined as making short term compromise in designing software systems and writing code to gain which makes it difficult to maintain the code &amp;amp; software in the future.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Use different versions of Node.js using NVM</title>
+      <link>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</link>
+      <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</guid>
+      <description>&lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rollback Ember-Data Model changes completely</title>
+      <link>http://kushdilip.github.io/blog-old/rollback-ember-data-model-changes-completely/</link>
+      <pubDate>Wed, 05 Nov 2014 00:48:54 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/rollback-ember-data-model-changes-completely/</guid>
+      <description>&lt;p&gt;Ember-Data models have a property called &lt;code&gt;isDirty&lt;/code&gt;. Whenever you make some changes to local model and it&amp;rsquo;s not yet saved to server, &lt;code&gt;isDirty&lt;/code&gt; property will be true.
+Generally our models have various &lt;code&gt;belongsTo&lt;/code&gt; and &lt;code&gt;hasMany&lt;/code&gt; relationships. So if some child of model gets dirty, then doing &lt;code&gt;model.rollback()&lt;/code&gt; doesn&amp;rsquo;t rollbacks changes on child ember objects.&lt;/p&gt;
+
+&lt;p&gt;Here I&amp;rsquo;m going to explain how to handle similar situation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Build Hybrid Mobile App with Ionic Framework and Yeoman</title>
+      <link>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
+      <pubDate>Sun, 28 Sep 2014 17:42:01 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
+      <description>&lt;p&gt;The hybrid app technolgoies have revolutioned the development of cross platform mobile applications.
+There are various free and licenced platform in market for building beautiful cross platform apps e.g. &lt;a href=&#34;http://phonegap.com/&#34;&gt;Phonegap&lt;/a&gt;, &lt;a href=&#34;http://www.appcelerator.com/titanium/&#34;&gt;Titanium&lt;/a&gt;, &lt;a href=&#34;http://www.sencha.com/products/touch&#34;&gt;Sencha Touch&lt;/a&gt; and &lt;a href=&#34;https://crosswalk-project.org/&#34;&gt;CrossWalk&lt;/a&gt;.
+Most popular one is &lt;strong&gt;Phonegap&lt;/strong&gt;. It uses Webkit rendering engine.While &lt;strong&gt;Crosswalk&lt;/strong&gt; is similar but developed by Intel and supports latest Blink rendering engine used in latest chrome browsers.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Install Conky in Linux Mint / Ubuntu</title>
+      <link>http://kushdilip.github.io/blog-old/how-to-install-conky-in-linux-mint-ubuntu/</link>
+      <pubDate>Sun, 31 Aug 2014 21:45:36 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/how-to-install-conky-in-linux-mint-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://conky.sourceforge.net/&#34;&gt;Conky&lt;/a&gt; is a free, light-weight system monitor for X, that displays various system information on your desktop. Using conky you can add diffrent kind of cool widgets to your Desktop. These widget can be used to monitor various system activities, ram &amp;amp; cpu usage or simply to show Date &amp;amp; Time.&lt;/p&gt;
+
+&lt;p&gt;In this post I will explain how you can install &lt;strong&gt;Conky&lt;/strong&gt; in Linux Mint and Ubuntu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://kushdilip.github.io/blog-old/page/privacy-policy/</link>
+      <pubDate>Thu, 31 Jul 2014 23:54:05 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/privacy-policy/</guid>
+      <description>Privacy Policy:</description>
+    </item>
+    
+    <item>
+      <title>Archived posts from old blog</title>
+      <link>http://kushdilip.github.io/blog-old/page/old/</link>
+      <pubDate>Fri, 25 Jul 2014 00:48:37 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/old/</guid>
+      <description>#####links to old blog on blogpost
+######Javascript MapReduce tips and tricks· javascript&amp;nbsp;&amp;nbsp;tips-trics&amp;nbsp;map-reduce· 
+######Zeal : Offline API documentation browser for Linux· · 
+######Installing Synapse launcher in Ubuntu 14.04· synapse&amp;nbsp;&amp;nbsp;ubuntu· 
+######Add Reindent keyboard shortcut to Sublime-Text 3
+######Accessing Guest (VirtualBox) Node.js Application from Windows/Ubuntu Host
+######Test WCF Service with WCF Test Client without installing Visual Studio
+######Convert Ember.js online guide using Gimli for PDF generation
+######Pipo Max M8 Pro: Buying Branded Chinese Android Tablet PC from India</description>
+    </item>
+    
+    <item>
+      <title>Awesome Ghost themes</title>
+      <link>http://kushdilip.github.io/blog-old/few-pretty-awesome-ghost-themes/</link>
+      <pubDate>Wed, 23 Jul 2014 00:19:33 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/few-pretty-awesome-ghost-themes/</guid>
+      <description>&lt;p&gt;I was looking for a nice and elegant theme for my newly created Ghost Blog.
+Finally, I selected few of them. I am sharing here the full list and corresponding github links. All these themes are free and open source. The github repositories have full description about how to install and configure the respective themes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About me!</title>
+      <link>http://kushdilip.github.io/blog-old/page/about/</link>
+      <pubDate>Tue, 22 Jul 2014 21:44:17 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/about/</guid>
+      <description>Hello! This is me, Dilip Kushwaha. I am Full Stack Developer based in Bangalore, IN.
+I am a programmer on steriods. I love to do experiments with Web technologies. I have expertise in building ambitious apps with Ember.js. I am quite comfortable with Node &amp;amp; Express as well. Previouly I have worked on technologies like .NET, Android &amp;amp; Angular.js.
+I am also contributing to various opensource projects, look at github for more.</description>
+    </item>
+    
+    <item>
+      <title>Zeal : Offline API documentation browser for Linux</title>
+      <link>http://kushdilip.github.io/blog-old/zeal-offline-api-documentation-browser-for-linux/</link>
+      <pubDate>Sun, 15 Jun 2014 23:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/zeal-offline-api-documentation-browser-for-linux/</guid>
+      <description>&lt;p&gt;Quoted from zealdocs.org &amp;ldquo;Zeal is a simple offline API documentation browser inspired by &lt;a href=&#34;http://kapeli.com/dash&#34;&gt;Dash&lt;/a&gt; (OS X app), available Linux and Windows&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Zeal gives you offline API documentation for most of the Libraries out there like Angular, Backbone, Django and many more. You can check the list on Dash&amp;rsquo;s &lt;a href=&#34;http://kapeli.com/dash#docsets&#34;&gt;website&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Javascript MapReduce examples</title>
+      <link>http://kushdilip.github.io/blog-old/javascript-mapreduce-examples/</link>
+      <pubDate>Fri, 13 Jun 2014 02:03:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/javascript-mapreduce-examples/</guid>
+      <description>&lt;p&gt;Recently, I was using map and reduce functions in javascript for my project. These are very userful. You can use them for different kind of array manipulations. Here I am listing out various use cases with code snippets.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing Synapse launcher in Ubuntu 14.04</title>
+      <link>http://kushdilip.github.io/blog-old/installing-synapse-launcher-in-ubuntu-14-04/</link>
+      <pubDate>Sun, 08 Jun 2014 10:50:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/installing-synapse-launcher-in-ubuntu-14-04/</guid>
+      <description>&lt;p&gt;I recently upgraded from Ubuntu 12.04 LTS to 14.04. I was quite used to of the Awesome Synapse launcher on Ubuntu 12.04. Just press Ctrl + Space and synapse is there to serve you.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately Synapse is not directly available through Software Centre in 14.04. But you can install through testing PPA. just follow this steps&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Add Reindent keyboard shortcut to Sublime-Text 3</title>
+      <link>http://kushdilip.github.io/blog-old/add-reindent-keyboard-shortcut-to-sublime-text-3/</link>
+      <pubDate>Mon, 26 May 2014 00:05:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/add-reindent-keyboard-shortcut-to-sublime-text-3/</guid>
+      <description>&lt;p&gt;I like my code to be always properly formatted, which makes it easier to read and understand. I use Sublime-text for coding and it has Reindent feature which can be found at &lt;code&gt;Edit&amp;gt;&amp;gt;Line&amp;gt;&amp;gt;Reindent&lt;/code&gt; ,but everybody wants a keyboard shortcut.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Accessing Guest (VirtualBox) Node.js Application from Windows/Ubuntu Host</title>
+      <link>http://kushdilip.github.io/blog-old/accessing-guest-virtualbox-node-js-application-from-windowsubuntu-host/</link>
+      <pubDate>Mon, 24 Feb 2014 01:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/accessing-guest-virtualbox-node-js-application-from-windowsubuntu-host/</guid>
+      <description>&lt;p&gt;If you are running a Node.js Application inside a Ubuntu VirtualBox machine and want to test the same application in any browser inside your Windows/Ubuntu Host OS, then follow this small tutorial. You can even test the application on any other device in same wifi or lan network as your Host/Guest Machine.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test WCF Service with WCF Test Client without installing Visual Studio</title>
+      <link>http://kushdilip.github.io/blog-old/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</link>
+      <pubDate>Thu, 20 Feb 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</guid>
+      <description>&lt;p&gt;There are various tools to test WCF services. Visual studio installation comes with default tool called WCF Test Client, which can be run from Visual Studio Command Prompt by typing wcftestclient.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to use jQuery UI datepicker</title>
+      <link>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</guid>
+      <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Play Classic Dave game in windows 7 32 bit using DOSBOX</title>
+      <link>http://kushdilip.github.io/blog-old/play-classic-dave-game-in-windows-7-32-bit-using-dosbox/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/play-classic-dave-game-in-windows-7-32-bit-using-dosbox/</guid>
+      <description>&lt;p&gt;Remember the Classic Dave game you might have played more than 10 years ago. That was the first game I played on PC. I liked it a lot. But it&amp;rsquo;s not possible to play Dave directly on Windows 7 32 bit.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Use Qt Creator as full fledged C&#43;&#43; IDE</title>
+      <link>http://kushdilip.github.io/blog-old/use-qt-creator-as-full-fledged-c-ide/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/use-qt-creator-as-full-fledged-c-ide/</guid>
+      <description>&lt;p&gt;I was putting efforts to learn C++ for so many months but didn&amp;rsquo;t find any suitable IDE on which I can practice. Then few months ago, one of my friend introduced me to Qt Creator, as one of the best IDE for C++. During the free time in this summer I gave it a try and started learning the language with the help of a ebook on this IDE. And surprisingly, I found Qt Creator to be perfect in so many ways. Every feature I was looking for previously, is  available in it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

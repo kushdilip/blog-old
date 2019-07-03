@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/tags/software/</link>
+    <description>Recent content in software on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Dec 2015 00:24:32 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Technical debt resources</title>
+      <link>http://kushdilip.github.io/blog-old/technical-debt-resources/</link>
+      <pubDate>Thu, 17 Dec 2015 00:24:32 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/technical-debt-resources/</guid>
+      <description>&lt;p&gt;You might have heard of the term Technical Debt at some point of time in your programming career. It is defined as making short term compromise in designing software systems and writing code to gain which makes it difficult to maintain the code &amp;amp; software in the future.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

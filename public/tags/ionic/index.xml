@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ionic on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/tags/ionic/</link>
+    <description>Recent content in ionic on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Sep 2014 17:42:01 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/tags/ionic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build Hybrid Mobile App with Ionic Framework and Yeoman</title>
+      <link>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
+      <pubDate>Sun, 28 Sep 2014 17:42:01 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
+      <description>&lt;p&gt;The hybrid app technolgoies have revolutioned the development of cross platform mobile applications.
+There are various free and licenced platform in market for building beautiful cross platform apps e.g. &lt;a href=&#34;http://phonegap.com/&#34;&gt;Phonegap&lt;/a&gt;, &lt;a href=&#34;http://www.appcelerator.com/titanium/&#34;&gt;Titanium&lt;/a&gt;, &lt;a href=&#34;http://www.sencha.com/products/touch&#34;&gt;Sencha Touch&lt;/a&gt; and &lt;a href=&#34;https://crosswalk-project.org/&#34;&gt;CrossWalk&lt;/a&gt;.
+Most popular one is &lt;strong&gt;Phonegap&lt;/strong&gt;. It uses Webkit rendering engine.While &lt;strong&gt;Crosswalk&lt;/strong&gt; is similar but developed by Intel and supports latest Blink rendering engine used in latest chrome browsers.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

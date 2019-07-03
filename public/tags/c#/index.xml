@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c# on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/tags/c#/</link>
+    <description>Recent content in c# on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2014 12:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test WCF Service with WCF Test Client without installing Visual Studio</title>
+      <link>http://kushdilip.github.io/blog-old/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</link>
+      <pubDate>Thu, 20 Feb 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</guid>
+      <description>&lt;p&gt;There are various tools to test WCF services. Visual studio installation comes with default tool called WCF Test Client, which can be run from Visual Studio Command Prompt by typing wcftestclient.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

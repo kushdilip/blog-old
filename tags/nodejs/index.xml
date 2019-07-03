@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/tags/nodejs/</link>
+    <link>http://kushdilip.github.io/blog-old/tags/nodejs/</link>
     <description>Recent content in Nodejs on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Nov 2014 15:14:00 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Use different versions of Node.js using NVM</title>
-      <link>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</link>
+      <link>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</link>
       <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</guid>
+      <guid>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</guid>
       <description>
 
 &lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;

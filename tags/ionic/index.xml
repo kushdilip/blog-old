@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ionic on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/tags/ionic/</link>
+    <link>http://kushdilip.github.io/blog-old/tags/ionic/</link>
     <description>Recent content in Ionic on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Sep 2014 17:42:01 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/tags/ionic/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/tags/ionic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Build Hybrid Mobile App with Ionic Framework and Yeoman</title>
-      <link>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
+      <link>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
       <pubDate>Sun, 28 Sep 2014 17:42:01 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
+      <guid>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
       <description>
 
 &lt;p&gt;The hybrid app technolgoies have revolutioned the development of cross platform mobile applications.

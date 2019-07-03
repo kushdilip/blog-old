@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/tags/data/</link>
+    <description>Recent content in data on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Nov 2014 00:48:54 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rollback Ember-Data Model changes completely</title>
+      <link>http://kushdilip.github.io/blog-old/rollback-ember-data-model-changes-completely/</link>
+      <pubDate>Wed, 05 Nov 2014 00:48:54 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/rollback-ember-data-model-changes-completely/</guid>
+      <description>&lt;p&gt;Ember-Data models have a property called &lt;code&gt;isDirty&lt;/code&gt;. Whenever you make some changes to local model and it&amp;rsquo;s not yet saved to server, &lt;code&gt;isDirty&lt;/code&gt; property will be true.
+Generally our models have various &lt;code&gt;belongsTo&lt;/code&gt; and &lt;code&gt;hasMany&lt;/code&gt; relationships. So if some child of model gets dirty, then doing &lt;code&gt;model.rollback()&lt;/code&gt; doesn&amp;rsquo;t rollbacks changes on child ember objects.&lt;/p&gt;
+
+&lt;p&gt;Here I&amp;rsquo;m going to explain how to handle similar situation.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

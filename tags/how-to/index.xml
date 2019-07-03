@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>How To on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/tags/how-to/</link>
+    <link>http://kushdilip.github.io/blog-old/tags/how-to/</link>
     <description>Recent content in How To on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jan 2016 09:48:44 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Create Ember Blog App: Part 1</title>
-      <link>http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/</link>
+      <link>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</link>
       <pubDate>Wed, 20 Jan 2016 09:48:44 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/</guid>
+      <guid>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</guid>
       <description>
 
 &lt;p&gt;I have been using &lt;a href=&#34;http://emberjs.com/&#34;&gt;Ember.js&lt;/a&gt; for approximately 18 months now. A lot has changed since I started learning it. Now things rarely break. There are plenty of &lt;a href=&#34;http://emberobserver.com/&#34;&gt;addons&lt;/a&gt; for whatever exciting stuff you want to do.
@@ -51,11 +51,11 @@ I am assuming that you are already convinced that Ember is cool and you&amp;rsqu
 
 &lt;p&gt;This commoand will scaffold the whole app with all necessary files and folders for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-app-directory.png&#34; alt=&#34;Ember app directory&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-app-directory.png&#34; alt=&#34;Ember app directory&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Now cd into directory &lt;code&gt;ember-blog-example&lt;/code&gt; and type &lt;strong&gt;&lt;code&gt;ember server&lt;/code&gt;&lt;/strong&gt;, which will take few seconds to build and start the server. Server is provided by ember-cli for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-server.png&#34; alt=&#34;Ember server&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-server.png&#34; alt=&#34;Ember server&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Open your broswer on and hit &lt;code&gt;localhost:4200&lt;/code&gt; to see live app. It has some welcome content.&lt;/p&gt;
 
@@ -249,9 +249,9 @@ So let&amp;rsquo;s say we refresh on route &lt;code&gt;localhost:4200/posts/1&lt
 
 &lt;p&gt;Screenshots from the app I am running locally&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-blog-posts.png&#34; alt=&#34;Screenshot 1&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-blog-posts.png&#34; alt=&#34;Screenshot 1&#34;/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-blog-posts-2.png&#34; alt=&#34;Screenshot 2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-blog-posts-2.png&#34; alt=&#34;Screenshot 2&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -269,10 +269,10 @@ First version is available here &lt;a href=&#34;https://github.com/kushdilip/emb
     
     <item>
       <title>How to use jQuery UI datepicker</title>
-      <link>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</link>
+      <link>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</link>
       <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</guid>
+      <guid>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</guid>
       <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;
 
 &lt;ul&gt;

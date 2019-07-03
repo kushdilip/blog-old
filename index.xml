@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/</link>
+    <link>http://kushdilip.github.io/blog-old/</link>
     <description>Recent content on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Feb 2016 19:28:38 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Recursively rename file folder names</title>
-      <link>http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/</link>
+      <link>http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/</link>
       <pubDate>Mon, 22 Feb 2016 19:28:38 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/</guid>
       <description>&lt;p&gt;Below commands will help you recursively rename file &amp;amp; folder names&lt;/p&gt;
 
 &lt;ul&gt;
@@ -37,10 +37,10 @@ $ zmv -W &#39;**/*dk*&#39; &#39;**/*kd*’
     
     <item>
       <title>Syncing git repo fork with upstream</title>
-      <link>http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/</link>
+      <link>http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/</link>
       <pubDate>Sat, 13 Feb 2016 22:38:57 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/</guid>
       <description>&lt;p&gt;Sometimes we fork git repositories and use the forked repo in our projects. But these fork repos get outdated as the upstream repo maintainers keep pushing commits.
 Here I will give you few commands to sync the forked repos with upstream repository.&lt;/p&gt;
 
@@ -75,10 +75,10 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
     
     <item>
       <title>Binding style attribute and safestring in Ember</title>
-      <link>http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/</link>
+      <link>http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/</link>
       <pubDate>Sat, 13 Feb 2016 19:53:42 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/</guid>
       <description>&lt;p&gt;Many times we want to have custom styles in our ember templates which are controlled via controller/components.&lt;/p&gt;
 
 &lt;p&gt;For above purpose we can form the whole style string as computed property and do the binding in htmlbars, but there are two things we need to take care of
@@ -112,10 +112,10 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
     
     <item>
       <title>Things I want to Learn/Read/Watch</title>
-      <link>http://kushdilip.github.io/blog/things-i-want-to-learn/</link>
+      <link>http://kushdilip.github.io/blog-old/things-i-want-to-learn/</link>
       <pubDate>Fri, 12 Feb 2016 00:32:07 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/things-i-want-to-learn/</guid>
+      <guid>http://kushdilip.github.io/blog-old/things-i-want-to-learn/</guid>
       <description>
 
 &lt;h2 id=&#34;javascript:bd2fbb17cea0f64a0e9730699d2b27c5&#34;&gt;Javascript&lt;/h2&gt;
@@ -207,10 +207,10 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
     
     <item>
       <title>Today I Learned</title>
-      <link>http://kushdilip.github.io/blog/today-i-learned/</link>
+      <link>http://kushdilip.github.io/blog-old/today-i-learned/</link>
       <pubDate>Fri, 12 Feb 2016 00:01:30 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/today-i-learned/</guid>
+      <guid>http://kushdilip.github.io/blog-old/today-i-learned/</guid>
       <description>
 
 &lt;p&gt;Here is the list of stuff I discovered myself or found out after exploration over internet.&lt;/p&gt;
@@ -220,20 +220,20 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
 &lt;h3 id=&#34;ember:d107de37c91ec336ae1c46140be47410&#34;&gt;Ember&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/&#34;&gt;Ember addon install package old &amp;amp; new&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/&#34;&gt;Binding style attribute and safestring in Ember&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/&#34;&gt;Ember addon install package old &amp;amp; new&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/&#34;&gt;Binding style attribute and safestring in Ember&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;git:d107de37c91ec336ae1c46140be47410&#34;&gt;Git&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/&#34;&gt;Syncing git repo fork with upstream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/&#34;&gt;Syncing git repo fork with upstream&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;shell:d107de37c91ec336ae1c46140be47410&#34;&gt;Shell&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/&#34;&gt;Recursively rename file folder names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/&#34;&gt;Recursively rename file folder names&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -241,17 +241,17 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
 &lt;blockquote&gt;
 &lt;h2 id=&#34;other-lists:d107de37c91ec336ae1c46140be47410&#34;&gt;Other lists&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://kushdilip.github.io/blog/things-i-want-to-learn/&#34;&gt;TIWTL - Things I want to Learn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://kushdilip.github.io/blog-old/things-i-want-to-learn/&#34;&gt;TIWTL - Things I want to Learn&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>
     
     <item>
       <title>Ember addon install package old &amp; new</title>
-      <link>http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/</link>
+      <link>http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/</link>
       <pubDate>Thu, 11 Feb 2016 23:59:04 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/</guid>
       <description>&lt;p&gt;Ember-cli provides &lt;code&gt;addAddonsToProject&lt;/code&gt; api method for addon developers to install other addons using blueprints. In older versions of ember-cli(perhaps &amp;lt; 1.13) &lt;code&gt;addAddonsToProject&lt;/code&gt; method doesn&amp;rsquo;t accepts array of packages but the new one does.&lt;/p&gt;
 
 &lt;p&gt;So here is the code to support your addon users who are using old or newer versions of ember-cli.&lt;/p&gt;
@@ -295,10 +295,10 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
     
     <item>
       <title>Create Ember Blog App: Part 1</title>
-      <link>http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/</link>
+      <link>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</link>
       <pubDate>Wed, 20 Jan 2016 09:48:44 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/ember-blog-app-example-tutorial-1/</guid>
+      <guid>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</guid>
       <description>
 
 &lt;p&gt;I have been using &lt;a href=&#34;http://emberjs.com/&#34;&gt;Ember.js&lt;/a&gt; for approximately 18 months now. A lot has changed since I started learning it. Now things rarely break. There are plenty of &lt;a href=&#34;http://emberobserver.com/&#34;&gt;addons&lt;/a&gt; for whatever exciting stuff you want to do.
@@ -335,11 +335,11 @@ I am assuming that you are already convinced that Ember is cool and you&amp;rsqu
 
 &lt;p&gt;This commoand will scaffold the whole app with all necessary files and folders for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-app-directory.png&#34; alt=&#34;Ember app directory&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-app-directory.png&#34; alt=&#34;Ember app directory&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Now cd into directory &lt;code&gt;ember-blog-example&lt;/code&gt; and type &lt;strong&gt;&lt;code&gt;ember server&lt;/code&gt;&lt;/strong&gt;, which will take few seconds to build and start the server. Server is provided by ember-cli for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-server.png&#34; alt=&#34;Ember server&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-server.png&#34; alt=&#34;Ember server&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Open your broswer on and hit &lt;code&gt;localhost:4200&lt;/code&gt; to see live app. It has some welcome content.&lt;/p&gt;
 
@@ -533,9 +533,9 @@ So let&amp;rsquo;s say we refresh on route &lt;code&gt;localhost:4200/posts/1&lt
 
 &lt;p&gt;Screenshots from the app I am running locally&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-blog-posts.png&#34; alt=&#34;Screenshot 1&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-blog-posts.png&#34; alt=&#34;Screenshot 1&#34;/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog/images/post-images/ember-blog-posts-2.png&#34; alt=&#34;Screenshot 2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://kushdilip.github.io/blog-old/images/post-images/ember-blog-posts-2.png&#34; alt=&#34;Screenshot 2&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -553,10 +553,10 @@ First version is available here &lt;a href=&#34;https://github.com/kushdilip/emb
     
     <item>
       <title>Quotes</title>
-      <link>http://kushdilip.github.io/blog/page/quotes/</link>
+      <link>http://kushdilip.github.io/blog-old/page/quotes/</link>
       <pubDate>Sun, 20 Dec 2015 13:23:03 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/quotes/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/quotes/</guid>
       <description>&lt;p&gt;We frequently come across brilliant quotes in books or on internet. These quotes inspires us for that moment and we start thinking that this can change our whole life. But after sometime we totally forget about it.
 So here I am putting up a compiled list of quotes which inspire me to bring the change in myself.&lt;/p&gt;
 
@@ -594,10 +594,10 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>inspirations</title>
-      <link>http://kushdilip.github.io/blog/page/inspirations/</link>
+      <link>http://kushdilip.github.io/blog-old/page/inspirations/</link>
       <pubDate>Fri, 18 Dec 2015 18:07:50 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/inspirations/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/inspirations/</guid>
       <description>
 
 &lt;h2 id=&#34;tech:e193aaaacd82f155352381b2c55884a9&#34;&gt;Tech&lt;/h2&gt;
@@ -636,10 +636,10 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>Technical debt resources</title>
-      <link>http://kushdilip.github.io/blog/technical-debt-resources/</link>
+      <link>http://kushdilip.github.io/blog-old/technical-debt-resources/</link>
       <pubDate>Thu, 17 Dec 2015 00:24:32 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/technical-debt-resources/</guid>
+      <guid>http://kushdilip.github.io/blog-old/technical-debt-resources/</guid>
       <description>
 
 &lt;p&gt;You might have heard of the term Technical Debt at some point of time in your programming career. It is defined as making short term compromise in designing software systems and writing code to gain which makes it difficult to maintain the code &amp;amp; software in the future.&lt;/p&gt;
@@ -682,10 +682,10 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>Use different versions of Node.js using NVM</title>
-      <link>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</link>
+      <link>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</link>
       <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</guid>
+      <guid>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</guid>
       <description>
 
 &lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;
@@ -765,10 +765,10 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>Rollback Ember-Data Model changes completely</title>
-      <link>http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/</link>
+      <link>http://kushdilip.github.io/blog-old/rollback-ember-data-model-changes-completely/</link>
       <pubDate>Wed, 05 Nov 2014 00:48:54 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/rollback-ember-data-model-changes-completely/</guid>
+      <guid>http://kushdilip.github.io/blog-old/rollback-ember-data-model-changes-completely/</guid>
       <description>&lt;p&gt;Ember-Data models have a property called &lt;code&gt;isDirty&lt;/code&gt;. Whenever you make some changes to local model and it&amp;rsquo;s not yet saved to server, &lt;code&gt;isDirty&lt;/code&gt; property will be true.
 Generally our models have various &lt;code&gt;belongsTo&lt;/code&gt; and &lt;code&gt;hasMany&lt;/code&gt; relationships. So if some child of model gets dirty, then doing &lt;code&gt;model.rollback()&lt;/code&gt; doesn&amp;rsquo;t rollbacks changes on child ember objects.&lt;/p&gt;
 
@@ -822,10 +822,10 @@ Now &lt;code&gt;house.get(&amp;quot;isDirty&amp;quot;)&lt;/code&gt; will be true
     
     <item>
       <title>Build Hybrid Mobile App with Ionic Framework and Yeoman</title>
-      <link>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
+      <link>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</link>
       <pubDate>Sun, 28 Sep 2014 17:42:01 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
+      <guid>http://kushdilip.github.io/blog-old/build-hybrid-mobile-app-with-ionic-framework-using-yeoman/</guid>
       <description>
 
 &lt;p&gt;The hybrid app technolgoies have revolutioned the development of cross platform mobile applications.
@@ -963,10 +963,10 @@ $ grunt cordova
     
     <item>
       <title>How to Install Conky in Linux Mint / Ubuntu</title>
-      <link>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</link>
+      <link>http://kushdilip.github.io/blog-old/how-to-install-conky-in-linux-mint-ubuntu/</link>
       <pubDate>Sun, 31 Aug 2014 21:45:36 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/how-to-install-conky-in-linux-mint-ubuntu/</guid>
+      <guid>http://kushdilip.github.io/blog-old/how-to-install-conky-in-linux-mint-ubuntu/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://conky.sourceforge.net/&#34;&gt;Conky&lt;/a&gt; is a free, light-weight system monitor for X, that displays various system information on your desktop. Using conky you can add diffrent kind of cool widgets to your Desktop. These widget can be used to monitor various system activities, ram &amp;amp; cpu usage or simply to show Date &amp;amp; Time.&lt;/p&gt;
@@ -1023,10 +1023,10 @@ $ sudo apt-get install conky-manager
     
     <item>
       <title>Privacy Policy</title>
-      <link>http://kushdilip.github.io/blog/page/privacy-policy/</link>
+      <link>http://kushdilip.github.io/blog-old/page/privacy-policy/</link>
       <pubDate>Thu, 31 Jul 2014 23:54:05 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/privacy-policy/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/privacy-policy/</guid>
       <description>&lt;p&gt;Privacy Policy:&lt;/p&gt;
 </description>
     </item>

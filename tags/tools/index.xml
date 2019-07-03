@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/tags/tools/</link>
+    <link>http://kushdilip.github.io/blog-old/tags/tools/</link>
     <description>Recent content in Tools on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 08 Jun 2014 10:50:00 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Installing Synapse launcher in Ubuntu 14.04</title>
-      <link>http://kushdilip.github.io/blog/installing-synapse-launcher-in-ubuntu-14-04/</link>
+      <link>http://kushdilip.github.io/blog-old/installing-synapse-launcher-in-ubuntu-14-04/</link>
       <pubDate>Sun, 08 Jun 2014 10:50:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/installing-synapse-launcher-in-ubuntu-14-04/</guid>
+      <guid>http://kushdilip.github.io/blog-old/installing-synapse-launcher-in-ubuntu-14-04/</guid>
       <description>
 
 &lt;p&gt;I recently upgraded from Ubuntu 12.04 LTS to 14.04. I was quite used to of the Awesome Synapse launcher on Ubuntu 12.04. Just press Ctrl + Space and synapse is there to serve you.&lt;/p&gt;

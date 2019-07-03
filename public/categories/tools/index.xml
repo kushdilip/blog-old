@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/categories/tools/</link>
+    <description>Recent content in Tools on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Aug 2014 21:45:36 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Install Conky in Linux Mint / Ubuntu</title>
+      <link>http://kushdilip.github.io/blog-old/how-to-install-conky-in-linux-mint-ubuntu/</link>
+      <pubDate>Sun, 31 Aug 2014 21:45:36 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/how-to-install-conky-in-linux-mint-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://conky.sourceforge.net/&#34;&gt;Conky&lt;/a&gt; is a free, light-weight system monitor for X, that displays various system information on your desktop. Using conky you can add diffrent kind of cool widgets to your Desktop. These widget can be used to monitor various system activities, ram &amp;amp; cpu usage or simply to show Date &amp;amp; Time.&lt;/p&gt;
+
+&lt;p&gt;In this post I will explain how you can install &lt;strong&gt;Conky&lt;/strong&gt; in Linux Mint and Ubuntu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Zeal : Offline API documentation browser for Linux</title>
+      <link>http://kushdilip.github.io/blog-old/zeal-offline-api-documentation-browser-for-linux/</link>
+      <pubDate>Sun, 15 Jun 2014 23:14:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/zeal-offline-api-documentation-browser-for-linux/</guid>
+      <description>&lt;p&gt;Quoted from zealdocs.org &amp;ldquo;Zeal is a simple offline API documentation browser inspired by &lt;a href=&#34;http://kapeli.com/dash&#34;&gt;Dash&lt;/a&gt; (OS X app), available Linux and Windows&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Zeal gives you offline API documentation for most of the Libraries out there like Angular, Backbone, Django and many more. You can check the list on Dash&amp;rsquo;s &lt;a href=&#34;http://kapeli.com/dash#docsets&#34;&gt;website&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing Synapse launcher in Ubuntu 14.04</title>
+      <link>http://kushdilip.github.io/blog-old/installing-synapse-launcher-in-ubuntu-14-04/</link>
+      <pubDate>Sun, 08 Jun 2014 10:50:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/installing-synapse-launcher-in-ubuntu-14-04/</guid>
+      <description>&lt;p&gt;I recently upgraded from Ubuntu 12.04 LTS to 14.04. I was quite used to of the Awesome Synapse launcher on Ubuntu 12.04. Just press Ctrl + Space and synapse is there to serve you.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately Synapse is not directly available through Software Centre in 14.04. But you can install through testing PPA. just follow this steps&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test WCF Service with WCF Test Client without installing Visual Studio</title>
+      <link>http://kushdilip.github.io/blog-old/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</link>
+      <pubDate>Thu, 20 Feb 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/test-wcf-service-with-wcf-test-client-without-installing-visual-studio/</guid>
+      <description>&lt;p&gt;There are various tools to test WCF services. Visual studio installation comes with default tool called WCF Test Client, which can be run from Visual Studio Command Prompt by typing wcftestclient.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Play Classic Dave game in windows 7 32 bit using DOSBOX</title>
+      <link>http://kushdilip.github.io/blog-old/play-classic-dave-game-in-windows-7-32-bit-using-dosbox/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/play-classic-dave-game-in-windows-7-32-bit-using-dosbox/</guid>
+      <description>&lt;p&gt;Remember the Classic Dave game you might have played more than 10 years ago. That was the first game I played on PC. I liked it a lot. But it&amp;rsquo;s not possible to play Dave directly on Windows 7 32 bit.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Use Qt Creator as full fledged C&#43;&#43; IDE</title>
+      <link>http://kushdilip.github.io/blog-old/use-qt-creator-as-full-fledged-c-ide/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/use-qt-creator-as-full-fledged-c-ide/</guid>
+      <description>&lt;p&gt;I was putting efforts to learn C++ for so many months but didn&amp;rsquo;t find any suitable IDE on which I can practice. Then few months ago, one of my friend introduced me to Qt Creator, as one of the best IDE for C++. During the free time in this summer I gave it a try and started learning the language with the help of a ebook on this IDE. And surprisingly, I found Qt Creator to be perfect in so many ways. Every feature I was looking for previously, is  available in it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

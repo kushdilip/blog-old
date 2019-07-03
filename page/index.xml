@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/page/</link>
+    <link>http://kushdilip.github.io/blog-old/page/</link>
     <description>Recent content in Pages on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Dec 2015 13:23:03 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Quotes</title>
-      <link>http://kushdilip.github.io/blog/page/quotes/</link>
+      <link>http://kushdilip.github.io/blog-old/page/quotes/</link>
       <pubDate>Sun, 20 Dec 2015 13:23:03 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/quotes/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/quotes/</guid>
       <description>&lt;p&gt;We frequently come across brilliant quotes in books or on internet. These quotes inspires us for that moment and we start thinking that this can change our whole life. But after sometime we totally forget about it.
 So here I am putting up a compiled list of quotes which inspire me to bring the change in myself.&lt;/p&gt;
 
@@ -52,10 +52,10 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>inspirations</title>
-      <link>http://kushdilip.github.io/blog/page/inspirations/</link>
+      <link>http://kushdilip.github.io/blog-old/page/inspirations/</link>
       <pubDate>Fri, 18 Dec 2015 18:07:50 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/inspirations/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/inspirations/</guid>
       <description>
 
 &lt;h2 id=&#34;tech:e193aaaacd82f155352381b2c55884a9&#34;&gt;Tech&lt;/h2&gt;
@@ -94,20 +94,20 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>Privacy Policy</title>
-      <link>http://kushdilip.github.io/blog/page/privacy-policy/</link>
+      <link>http://kushdilip.github.io/blog-old/page/privacy-policy/</link>
       <pubDate>Thu, 31 Jul 2014 23:54:05 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/privacy-policy/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/privacy-policy/</guid>
       <description>&lt;p&gt;Privacy Policy:&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Archived posts from old blog</title>
-      <link>http://kushdilip.github.io/blog/page/old/</link>
+      <link>http://kushdilip.github.io/blog-old/page/old/</link>
       <pubDate>Fri, 25 Jul 2014 00:48:37 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/old/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/old/</guid>
       <description>&lt;p&gt;#####links to old blog on &lt;a href=&#34;http://kushdilip.blogspot.in&#34;&gt;blogpost&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -170,10 +170,10 @@ So here I am putting up a compiled list of quotes which inspire me to bring the 
     
     <item>
       <title>About me!</title>
-      <link>http://kushdilip.github.io/blog/page/about/</link>
+      <link>http://kushdilip.github.io/blog-old/page/about/</link>
       <pubDate>Tue, 22 Jul 2014 21:44:17 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/page/about/</guid>
+      <guid>http://kushdilip.github.io/blog-old/page/about/</guid>
       <description>&lt;p&gt;Hello! This is me, Dilip Kushwaha. I am Full Stack Developer based in Bangalore, IN.&lt;/p&gt;
 
 &lt;p&gt;I am a programmer on steriods. I love to do experiments with Web technologies. I have expertise in building ambitious apps with &lt;a href=&#34;http://emberjs.com/&#34;&gt;Ember.js&lt;/a&gt;. I am quite comfortable with Node &amp;amp; Express as well. Previouly I have worked on technologies like .NET, Android &amp;amp; Angular.js.&lt;/p&gt;

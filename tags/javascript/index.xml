@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/tags/javascript/</link>
+    <link>http://kushdilip.github.io/blog-old/tags/javascript/</link>
     <description>Recent content in Javascript on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Nov 2014 15:14:00 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Use different versions of Node.js using NVM</title>
-      <link>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</link>
+      <link>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</link>
       <pubDate>Sun, 23 Nov 2014 15:14:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/use-different-versions-of-node-using-nvm/</guid>
+      <guid>http://kushdilip.github.io/blog-old/use-different-versions-of-node-using-nvm/</guid>
       <description>
 
 &lt;p&gt;There are two popular methods of installing Node.js on linux machines. First, using repository and other using NVM. There is third method also, using Software manager but since there is some other package named &lt;code&gt;node&lt;/code&gt; which messes up with nodejs, so kindly avoid that.&lt;/p&gt;
@@ -94,10 +94,10 @@
     
     <item>
       <title>Javascript MapReduce examples</title>
-      <link>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</link>
+      <link>http://kushdilip.github.io/blog-old/javascript-mapreduce-examples/</link>
       <pubDate>Fri, 13 Jun 2014 02:03:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</guid>
+      <guid>http://kushdilip.github.io/blog-old/javascript-mapreduce-examples/</guid>
       <description>
 
 &lt;p&gt;Recently, I was using map and reduce functions in javascript for my project. These are very userful. You can use them for different kind of array manipulations. Here I am listing out various use cases with code snippets.&lt;/p&gt;
@@ -129,10 +129,10 @@ console.log(bar, barOne) // 16
     
     <item>
       <title>How to use jQuery UI datepicker</title>
-      <link>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</link>
+      <link>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</link>
       <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/how-to-use-jquery-ui-datepicker/</guid>
+      <guid>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</guid>
       <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;
 
 &lt;ul&gt;

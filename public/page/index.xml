@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/page/</link>
+    <description>Recent content in Pages on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Dec 2015 13:23:03 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quotes</title>
+      <link>http://kushdilip.github.io/blog-old/page/quotes/</link>
+      <pubDate>Sun, 20 Dec 2015 13:23:03 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/quotes/</guid>
+      <description>&lt;p&gt;We frequently come across brilliant quotes in books or on internet. These quotes inspires us for that moment and we start thinking that this can change our whole life. But after sometime we totally forget about it.
+So here I am putting up a compiled list of quotes which inspire me to bring the change in myself.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>inspirations</title>
+      <link>http://kushdilip.github.io/blog-old/page/inspirations/</link>
+      <pubDate>Fri, 18 Dec 2015 18:07:50 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/inspirations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://kushdilip.github.io/blog-old/page/privacy-policy/</link>
+      <pubDate>Thu, 31 Jul 2014 23:54:05 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/privacy-policy/</guid>
+      <description>Privacy Policy:</description>
+    </item>
+    
+    <item>
+      <title>Archived posts from old blog</title>
+      <link>http://kushdilip.github.io/blog-old/page/old/</link>
+      <pubDate>Fri, 25 Jul 2014 00:48:37 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/old/</guid>
+      <description>#####links to old blog on blogpost
+######Javascript MapReduce tips and tricks· javascript&amp;nbsp;&amp;nbsp;tips-trics&amp;nbsp;map-reduce· 
+######Zeal : Offline API documentation browser for Linux· · 
+######Installing Synapse launcher in Ubuntu 14.04· synapse&amp;nbsp;&amp;nbsp;ubuntu· 
+######Add Reindent keyboard shortcut to Sublime-Text 3
+######Accessing Guest (VirtualBox) Node.js Application from Windows/Ubuntu Host
+######Test WCF Service with WCF Test Client without installing Visual Studio
+######Convert Ember.js online guide using Gimli for PDF generation
+######Pipo Max M8 Pro: Buying Branded Chinese Android Tablet PC from India</description>
+    </item>
+    
+    <item>
+      <title>About me!</title>
+      <link>http://kushdilip.github.io/blog-old/page/about/</link>
+      <pubDate>Tue, 22 Jul 2014 21:44:17 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/page/about/</guid>
+      <description>Hello! This is me, Dilip Kushwaha. I am Full Stack Developer based in Bangalore, IN.
+I am a programmer on steriods. I love to do experiments with Web technologies. I have expertise in building ambitious apps with Ember.js. I am quite comfortable with Node &amp;amp; Express as well. Previouly I have worked on technologies like .NET, Android &amp;amp; Angular.js.
+I am also contributing to various opensource projects, look at github for more.</description>
+    </item>
+    
+  </channel>
+</rss>

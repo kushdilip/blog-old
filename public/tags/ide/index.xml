@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ide on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/tags/ide/</link>
+    <description>Recent content in ide on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jan 2014 12:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Qt Creator as full fledged C&#43;&#43; IDE</title>
+      <link>http://kushdilip.github.io/blog-old/use-qt-creator-as-full-fledged-c-ide/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/use-qt-creator-as-full-fledged-c-ide/</guid>
+      <description>&lt;p&gt;I was putting efforts to learn C++ for so many months but didn&amp;rsquo;t find any suitable IDE on which I can practice. Then few months ago, one of my friend introduced me to Qt Creator, as one of the best IDE for C++. During the free time in this summer I gave it a try and started learning the language with the help of a ebook on this IDE. And surprisingly, I found Qt Creator to be perfect in so many ways. Every feature I was looking for previously, is  available in it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

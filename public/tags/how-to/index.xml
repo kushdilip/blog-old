@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>how-to on Dilip Kushwaha</title>
+    <link>http://kushdilip.github.io/blog-old/tags/how-to/</link>
+    <description>Recent content in how-to on Dilip Kushwaha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jan 2016 09:48:44 +0530</lastBuildDate>
+    
+	<atom:link href="http://kushdilip.github.io/blog-old/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Ember Blog App: Part 1</title>
+      <link>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</link>
+      <pubDate>Wed, 20 Jan 2016 09:48:44 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/ember-blog-app-example-tutorial-1/</guid>
+      <description>&lt;p&gt;I have been using &lt;a href=&#34;http://emberjs.com/&#34;&gt;Ember.js&lt;/a&gt; for approximately 18 months now. A lot has changed since I started learning it. Now things rarely break. There are plenty of &lt;a href=&#34;http://emberobserver.com/&#34;&gt;addons&lt;/a&gt; for whatever exciting stuff you want to do.
+There are articles, tutorials, podcasts, conference videos and local ember meetups everywhere. Small startups to big companies are using Ember to builds awesome apps.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to use jQuery UI datepicker</title>
+      <link>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</link>
+      <pubDate>Tue, 21 Jan 2014 12:00:00 +0530</pubDate>
+      
+      <guid>http://kushdilip.github.io/blog-old/how-to-use-jquery-ui-datepicker/</guid>
+      <description>&lt;p&gt;I was developing a simple java web application where I needed a datepicker. So here is how I used the jQuery UI datepicker in my application.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

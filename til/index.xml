@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TILs on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/til/</link>
+    <link>http://kushdilip.github.io/blog-old/til/</link>
     <description>Recent content in TILs on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Feb 2016 19:28:38 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/til/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/til/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Recursively rename file folder names</title>
-      <link>http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/</link>
+      <link>http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/</link>
       <pubDate>Mon, 22 Feb 2016 19:28:38 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/shell/recursively-rename-file-folder-names/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/shell/recursively-rename-file-folder-names/</guid>
       <description>&lt;p&gt;Below commands will help you recursively rename file &amp;amp; folder names&lt;/p&gt;
 
 &lt;ul&gt;
@@ -37,10 +37,10 @@ $ zmv -W &#39;**/*dk*&#39; &#39;**/*kd*’
     
     <item>
       <title>Syncing git repo fork with upstream</title>
-      <link>http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/</link>
+      <link>http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/</link>
       <pubDate>Sat, 13 Feb 2016 22:38:57 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/git/syncing-git-repo-fork-with-upstream/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/git/syncing-git-repo-fork-with-upstream/</guid>
       <description>&lt;p&gt;Sometimes we fork git repositories and use the forked repo in our projects. But these fork repos get outdated as the upstream repo maintainers keep pushing commits.
 Here I will give you few commands to sync the forked repos with upstream repository.&lt;/p&gt;
 
@@ -75,10 +75,10 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
     
     <item>
       <title>Binding style attribute and safestring in Ember</title>
-      <link>http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/</link>
+      <link>http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/</link>
       <pubDate>Sat, 13 Feb 2016 19:53:42 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/ember/binding-style-attribute-and-safestring/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/ember/binding-style-attribute-and-safestring/</guid>
       <description>&lt;p&gt;Many times we want to have custom styles in our ember templates which are controlled via controller/components.&lt;/p&gt;
 
 &lt;p&gt;For above purpose we can form the whole style string as computed property and do the binding in htmlbars, but there are two things we need to take care of
@@ -112,10 +112,10 @@ upstream	https://github.com/digitalcraftsman/hugo-icarus-theme.git (push)
     
     <item>
       <title>Ember addon install package old &amp; new</title>
-      <link>http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/</link>
+      <link>http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/</link>
       <pubDate>Thu, 11 Feb 2016 23:59:04 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/til/ember/addon-install-package-new-old/</guid>
+      <guid>http://kushdilip.github.io/blog-old/til/ember/addon-install-package-new-old/</guid>
       <description>&lt;p&gt;Ember-cli provides &lt;code&gt;addAddonsToProject&lt;/code&gt; api method for addon developers to install other addons using blueprints. In older versions of ember-cli(perhaps &amp;lt; 1.13) &lt;code&gt;addAddonsToProject&lt;/code&gt; method doesn&amp;rsquo;t accepts array of packages but the new one does.&lt;/p&gt;
 
 &lt;p&gt;So here is the code to support your addon users who are using old or newer versions of ember-cli.&lt;/p&gt;

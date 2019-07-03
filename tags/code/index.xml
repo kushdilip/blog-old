@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Dilip Kushwaha</title>
-    <link>http://kushdilip.github.io/blog/tags/code/</link>
+    <link>http://kushdilip.github.io/blog-old/tags/code/</link>
     <description>Recent content in Code on Dilip Kushwaha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Jun 2014 02:03:00 +0530</lastBuildDate>
-    <atom:link href="http://kushdilip.github.io/blog/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kushdilip.github.io/blog-old/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Javascript MapReduce examples</title>
-      <link>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</link>
+      <link>http://kushdilip.github.io/blog-old/javascript-mapreduce-examples/</link>
       <pubDate>Fri, 13 Jun 2014 02:03:00 +0530</pubDate>
       
-      <guid>http://kushdilip.github.io/blog/javascript-mapreduce-examples/</guid>
+      <guid>http://kushdilip.github.io/blog-old/javascript-mapreduce-examples/</guid>
       <description>
 
 &lt;p&gt;Recently, I was using map and reduce functions in javascript for my project. These are very userful. You can use them for different kind of array manipulations. Here I am listing out various use cases with code snippets.&lt;/p&gt;
